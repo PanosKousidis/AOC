@@ -17,7 +17,7 @@ namespace DayLibraryTests._2017
         public void TestPart2()
         {
             var arr = "5\t9\t2\t8\r\n9\t4\t7\t3\r\n3\t8\t6\t5".StringTo2ArrayOfArrays("\t");
-            Assert.AreEqual(CalcCheckSumDivRem(arr), 9);
+            Assert.AreEqual(CalcCheckSumMod(arr), 9);
         }
     }
 }

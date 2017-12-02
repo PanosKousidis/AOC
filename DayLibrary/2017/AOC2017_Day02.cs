@@ -33,7 +33,7 @@ namespace DayLibrary
         protected override void Part2(string input)
         {
             var arr = input.StringTo2ArrayOfArrays("\t");
-            Console.WriteLine(CalcCheckSumDivRem(arr));
+            Console.WriteLine(CalcCheckSumMod(arr));
         }
 
         protected static int CalcCheckSumMinMax(IEnumerable<IEnumerable<string>> arr)
@@ -53,7 +53,7 @@ namespace DayLibrary
             }
             return sum;
         }
-        protected static int CalcCheckSumDivRem(IEnumerable<string[]> arr)
+        protected static int CalcCheckSumMod(IEnumerable<string[]> arr)
         {
             var sum = 0;
 
@@ -68,7 +68,7 @@ namespace DayLibrary
                         if (j1 == j2) continue;
                         var no1 = int.Parse(t[j1]);
                         var no2 = int.Parse(t[j2]);
-                        Math.DivRem(no1, no2, out var mod);
+                        var mod = no1 % no2;
                         if (mod != 0 || no2 == 0) continue;
                         max = no1;
                         min = no2;

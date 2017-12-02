@@ -31,19 +31,19 @@ namespace Common.Helpers
         {
             switch (direction)
             {
-                case ECardinals.North:
+                case ECardinals.Up:
                     if (IsValidMapLocation(LocationX, LocationY + 1))
                         LocationY++;
                     break;
-                case ECardinals.East:
+                case ECardinals.Right:
                     if (IsValidMapLocation(LocationX + 1, LocationY))
                         LocationX++;
                     break;
-                case ECardinals.South:
+                case ECardinals.Down:
                     if (IsValidMapLocation(LocationX, LocationY - 1))
                         LocationY--;
                     break;
-                case ECardinals.West:
+                case ECardinals.Left:
                     if (IsValidMapLocation(LocationX - 1, LocationY))
                         LocationX--;
                     break;

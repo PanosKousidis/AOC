@@ -23,7 +23,7 @@ namespace DayLibrary
             for (var i = 0; i < input.Length; i++)
             {
                 var firstchar = input[i];
-                Math.DivRem(i + feed, input.Length, out var j);
+                var j = (i + feed) % input.Length;
                 var secondchar = input[j];
                 if (firstchar == secondchar)
                 {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Common.Enum;
@@ -52,10 +52,10 @@ RULRDLDDLRURDDDDDDRURLLLDDDUUULLRRDLDLURUURLUDLURRLUDUURDULDRUULDDURULDUULDDULLL
         {
             switch (s)
             {
-                case "U": return ECardinals.North;
-                case "D": return ECardinals.South;
-                case "L": return ECardinals.West;
-                case "R": return ECardinals.East;
+                case "U": return ECardinals.Up;
+                case "D": return ECardinals.Down;
+                case "L": return ECardinals.Left;
+                case "R": return ECardinals.Right;
                 default: throw new NotSupportedException();
             }
         }
