@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Common.Enum;
 
 namespace Common.Extensions
 {
     public static class ArrayHelper
     {
-        public static IEnumerable<string[]> StringTo2ArrayOfArrays(this string input, string columnDelimiter)
+        public static string[][] StringTo2ArrayOfArrays(this string input, string columnDelimiter)
         {
             var lines = input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -22,5 +23,20 @@ namespace Common.Extensions
             }
             return ret;
         }
+
+        public static string[,] InvertArray(this string[][] inputArr)
+        {
+            var ret = new string[inputArr.Length, inputArr.Length];
+
+            for (var i = 0; i < inputArr.Length; i++)
+            {
+                for (var j = 0; j < inputArr[i].Length; j++)
+                {
+                    ret[j, inputArr.GetUpperBound(0) - i] = inputArr[i][j];
+                }
+            }
+            return ret;
+        }
+      
     }
 }

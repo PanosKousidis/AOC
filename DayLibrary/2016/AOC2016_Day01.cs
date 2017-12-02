@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Common;
 using Common.Enum;
 using Common.Helpers;
 
@@ -26,7 +25,7 @@ namespace DayLibrary
             foreach (var direction in input.Split(','))
             {
                 person.Turn(ParseTurnOrders(direction));
-                person.Move(ParseSteps(direction));
+                person.MoveForward(ParseSteps(direction));
             }
             return person;
         }
@@ -45,7 +44,7 @@ namespace DayLibrary
             foreach (var direction in input.Split(','))
             {
                 person.Turn(ParseTurnOrders(direction));
-                person.Move(ParseSteps(direction));
+                person.MoveForward(ParseSteps(direction));
                 if (_bDone) break;
             }
             return person;
