@@ -1,4 +1,5 @@
 ﻿using DayLibrary;
+using DayLibrary.Properties;
 using NUnit.Framework;
 
 namespace DayLibraryTests
@@ -13,6 +14,7 @@ namespace DayLibraryTests
                         "RRDDD\r\n" + 
                         "LURDL\r\n" + 
                         "UUUUD"),"1985");
+            Assert.AreEqual(Part1Result(Resources.AOC2016_Day02_Input),"47978");
         }
         [Test]
         public void TestPart2()
@@ -21,6 +23,8 @@ namespace DayLibraryTests
                                         "RRDDD\r\n" +
                                         "LURDL\r\n" +
                                         "UUUUD"), "5DB3");
+            Assert.AreEqual(Part2Result(Resources.AOC2016_Day02_Input), "659AD");
+
         }
 
     }

@@ -15,7 +15,7 @@ namespace DayLibrary
         protected override void Part1(string input)
         {
             var p = Part1Result(input);
-            Console.WriteLine(p.LocationX + "," + p.LocationY);
+            //Console.WriteLine(p.LocationX + "," + p.LocationY);
             Console.WriteLine(p.DistanceFrom(0, 0));
         }
 
@@ -34,11 +34,12 @@ namespace DayLibrary
         protected override void Part2(string input)
         {
             var p = Part2Result(input);
-            Console.WriteLine(p.LocationX + "," + p.LocationY);
+            //Console.WriteLine(p.LocationX + "," + p.LocationY);
             Console.WriteLine(p.DistanceFrom(0, 0));
         }
         protected MovingIn2D Part2Result(string input)
         {
+            _bDone = false;
             var person = new MovingIn2D();
             person.AlreadyVisited += OnAlreadyVisited;
 

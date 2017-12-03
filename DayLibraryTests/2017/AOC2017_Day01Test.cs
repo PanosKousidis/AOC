@@ -1,5 +1,7 @@
 ﻿using DayLibrary;
+using DayLibrary.Properties;
 using NUnit.Framework;
+using System.Resources;
 
 namespace DayLibraryTests
 {
@@ -13,7 +15,8 @@ namespace DayLibraryTests
                 Assert.AreEqual(CyclicSequence("1111", 1), 4);
                 Assert.AreEqual(CyclicSequence("1234", 1), 0);
                 Assert.AreEqual(CyclicSequence("91212129", 1), 9);
-            }
+                Assert.AreEqual(CyclicSequence(Resources.AOC2017_Day01_Input, 1), 1158);
+        }
 
             [Test]
             public void TestPart2()
@@ -23,6 +26,7 @@ namespace DayLibraryTests
                 Assert.AreEqual(CyclicSequence("123425", 6/2), 4);
                 Assert.AreEqual(CyclicSequence("123123", 6/2), 12);
                 Assert.AreEqual(CyclicSequence("12131415", 8/2), 4);
-            }
+                Assert.AreEqual(CyclicSequence(Resources.AOC2017_Day01_Input, Resources.AOC2017_Day01_Input.Length / 2), 1132);
+        }
     }
 }

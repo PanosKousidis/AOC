@@ -22,7 +22,7 @@ namespace DayLibrary.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DayLibrary.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DayLibrary.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace DayLibrary.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace DayLibrary.Properties {
         /// <summary>
         ///   Looks up a localized string similar to R3, L2, L2, R4, L1, R2, R3, R4, L2, R4, L2, L5, L1, R5, R2, R2, L1, R4, R1, L5, L3, R4, R3, R1, L1, L5, L4, L2, R5, L3, L4, R3, R1, L3, R1, L3, R3, L4, R2, R5, L190, R2, L3, R47, R4, L3, R78, L1, R3, R190, R4, L3, R4, R2, R5, R3, R4, R3, L1, L4, R3, L4, R1, L4, L5, R3, L3, L4, R1, R2, L4, L3, R3, R3, L2, L5, R1, L4, L1, R5, L5, R1, R5, L4, R2, L2, R1, L5, L4, R4, R4, R3, R2, R3, L1, R4, R5, L2, L5, L4, L1, R4, L4, R4, L4, R1, R5, L1, R1, L5, R5, R1, R1, L3, L1, R4, L1, L4, L4, L3, R1, R4, R1, R1, R2, L5, L2 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string AOC2016_Day01_Input {
+        public static string AOC2016_Day01_Input {
             get {
                 return ResourceManager.GetString("AOC2016_Day01_Input", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace DayLibrary.Properties {
         /// <summary>
         ///   Looks up a localized string similar to RRLLRLLRULLRUUUDRDLDDLLLDDDDDUUURRRRUUDLRULURRRDRUDRUUDDRUDLLLRLDDDUDRDDRRLLLLRLRLULUURDRURRUULDRRDUDURRUURURDLURULLDUDRDLUUUUDDURRLLLUDLDLRDRRRDULLDLDULLDRLDLDURDLRRULLDDLDRLLLUDDLLRDURULLDDDDDUURURLRLRRDUURUULRLLLULLRLULLUUDRRLLDURLDDDDULUUDLUDDDULRLDURDDRUUDRRUUURLLLULURUDRULDRDUDUDRRDDULRURLLRRLRRLLDLULURDRDRULDRDRURUDLLRRDUUULDDDUURDLULDLRLLURRURLLUDURDDRUDRDLLLLDLRLDLDDRDRRDUUULLUULRRDLURLDULLDLDUUUULLLDRURLRULLULRLULUURLLRDDRULDULRLDRRURLURUDLRRRLUDLDUULULLURLDDUDDLLUDRUDRLDUDURRRRLRUUURLUDDUDURDUDDD [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string AOC2016_Day02_Input {
+        public static string AOC2016_Day02_Input {
             get {
                 return ResourceManager.GetString("AOC2016_Day02_Input", resourceCulture);
             }
@@ -81,18 +81,43 @@ namespace DayLibrary.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 32941994713271959948248321975648598766826381888897682988942438326656546814128868622345259915532765786412655899591784142183893293614966739916146736263445521794139955622668181383723932139661431249144693976925872511126632178628792332267635339111288933545363532138471222514638578941598198287248279695764321918477877727328812668754697211893318822281465768329213146382213173932564719985981172896326846633552738459839338457217134978117669953677958579652221836687655174542633541111348413346313451115961316827261965747631 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string AOC2017_Day01_Input {
+        public static string AOC2017_Day01_Input {
             get {
                 return ResourceManager.GetString("AOC2017_Day01_Input", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 493\t458\t321\t120\t49\t432\t433\t92\t54\t452\t41\t461\t388\t409\t263\t58\r\n961\t98\t518\t188\t958\t114\t1044\t881\t948\t590\t972\t398\t115\t116\t451\t492\r\n76\t783\t709\t489\t617\t72\t824\t452\t748\t737\t691\t90\t94\t77\t84\t756\r\n204\t217\t90\t335\t220\t127\t302\t205\t242\t202\t259\t110\t118\t111\t200\t112\r\n249\t679\t4015\t106\t3358\t1642\t228\t4559\t307\t193\t4407\t3984\t3546\t2635\t3858\t924\r\n1151\t1060\t2002\t168\t3635\t3515\t3158\t141\t4009\t3725\t996\t142\t3672\t153\t134\t1438\r\n95\t600\t1171 [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to 493	458	321	120	49	432	433	92	54	452	41	461	388	409	263	58
+        ///961	98	518	188	958	114	1044	881	948	590	972	398	115	116	451	492
+        ///76	783	709	489	617	72	824	452	748	737	691	90	94	77	84	756
+        ///204	217	90	335	220	127	302	205	242	202	259	110	118	111	200	112
+        ///249	679	4015	106	3358	1642	228	4559	307	193	4407	3984	3546	2635	3858	924
+        ///1151	1060	2002	168	3635	3515	3158	141	4009	3725	996	142	3672	153	134	1438
+        ///95	600	1171	1896	174	1852	1616	928	79	1308	2016	88	80	1559	1183	107
+        ///187	567	432	553	69	38	131	166	93	132	498	153	4 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string AOC2017_Day02_Input {
+        public static string AOC2017_Day02_Input {
             get {
                 return ResourceManager.GetString("AOC2017_Day02_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 361527.
+        /// </summary>
+        public static string AOC2017_Day03_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day03_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day04_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day04_Input", resourceCulture);
             }
         }
     }
