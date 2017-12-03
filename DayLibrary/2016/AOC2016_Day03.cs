@@ -21,7 +21,7 @@ namespace DayLibrary
 
         protected static string Part1Result(string input)
         {
-           
+            return null;
         }
 
         protected override void Part2(string input)
@@ -31,7 +31,7 @@ namespace DayLibrary
         }
         protected static string Part2Result(string input)
         {
-
+            return null;
         }
 
     }
