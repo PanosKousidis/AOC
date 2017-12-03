@@ -5,8 +5,8 @@ namespace AOC
 {
     internal static class Program
     {
-        private const string Year = "2016";
-        //private const string Year = "2017";
+        //private const string Year = "2016";
+        private const string Year = "2017";
 
         private static void Main()
         {

@@ -23,8 +23,8 @@ namespace DayLibrary
         {
             var keypad = ("1 2 3\r\n" +
                           "4 5 6\r\n" +
-                          "7 8 9").StringTo2ArrayOfArrays(" ").InvertArray();
-            var p = new MovingPersonIn2D
+                          "7 8 9").StringTo2ArrayOfArrays(" ").InvertArray().ToDictionaryOfPointObject();
+            var p = new MovingIn2D
             {
                 LocationX = 1,
                 LocationY = 1,
@@ -36,7 +36,7 @@ namespace DayLibrary
             {
                 foreach (var order in line)
                 {
-                    p.Move(ParseCardinal(order.ToString()));
+                    p.Move(ParseCardinal(order.ToString()), 1, false, false);
                 }
                 retVal += p.MapValue;
             }
@@ -65,8 +65,8 @@ namespace DayLibrary
                          "# 2 3 4 #\r\n" +
                          "5 6 7 8 9\r\n" +
                          "# A B C #\r\n" +
-                         "# # D # #").StringTo2ArrayOfArrays(" ").InvertArray();
-            var p = new MovingPersonIn2D
+                         "# # D # #").StringTo2ArrayOfArrays(" ").InvertArray().ToDictionaryOfPointObject();
+            var p = new MovingIn2D
             {
                 LocationX = 0,
                 LocationY = 2,
@@ -79,7 +79,7 @@ namespace DayLibrary
             {
                 foreach (var order in line)
                 {
-                    p.Move(ParseCardinal(order.ToString()));
+                    p.Move(ParseCardinal(order.ToString()), 1, false, false);
                 }
                 retVal += p.MapValue;
             }

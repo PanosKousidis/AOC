@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using Common.Enum;
 
@@ -38,5 +39,31 @@ namespace Common.Extensions
             return ret;
         }
       
+        public static Dictionary<Point,object> ToDictionaryOfPointObject(this string[][] arr)
+        {
+            var dic = new Dictionary<Point, object>();
+            for (var i = 0; i < arr.Length; i++)
+            {
+                for (var j = 0; j < arr[i].Length; j++)
+                {
+                    dic.Add(new Point(i,j),arr[i][j]);
+                }
+            }
+            return dic;
+        }
+        public static Dictionary<Point, object> ToDictionaryOfPointObject(this string[,] arr)
+        {
+            var dic = new Dictionary<Point, object>();
+            for (var i = 0; i <= arr.GetUpperBound(0); i++)
+            {
+                for (var j = 0; j <= arr.GetUpperBound(1); j++)
+                {
+                    dic.Add(new Point(i, j), arr[i,j]);
+                }
+            }
+            return dic;
+        }
+
     }
+
 }

@@ -19,14 +19,14 @@ namespace DayLibrary
             Console.WriteLine(p.DistanceFrom(0, 0));
         }
 
-        protected MovingPersonIn2D Part1Result(string input)
+        protected MovingIn2D Part1Result(string input)
         {
-            var person = new MovingPersonIn2D();
+            var person = new MovingIn2D();
 
             foreach (var direction in input.Split(','))
             {
                 person.Turn(ParseTurnOrders(direction));
-                person.MoveForward(ParseSteps(direction));
+                person.MoveForward(ParseSteps(direction), false, true);
             }
             return person;
         }
@@ -37,21 +37,21 @@ namespace DayLibrary
             Console.WriteLine(p.LocationX + "," + p.LocationY);
             Console.WriteLine(p.DistanceFrom(0, 0));
         }
-        protected MovingPersonIn2D Part2Result(string input)
+        protected MovingIn2D Part2Result(string input)
         {
-            var person = new MovingPersonIn2D();
+            var person = new MovingIn2D();
             person.AlreadyVisited += OnAlreadyVisited;
 
             foreach (var direction in input.Split(','))
             {
                 person.Turn(ParseTurnOrders(direction));
-                person.MoveForward(ParseSteps(direction));
+                person.MoveForward(ParseSteps(direction), true, true);
                 if (_bDone) break;
             }
             return person;
         }
 
-        private void OnAlreadyVisited(MovingPersonIn2D sender, int x, int y)
+        private void OnAlreadyVisited(MovingIn2D sender, int x, int y)
         {
             _bDone = true;
             sender.MoveAllowed = false;

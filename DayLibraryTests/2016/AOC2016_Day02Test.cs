@@ -1,7 +1,7 @@
 ﻿using DayLibrary;
 using NUnit.Framework;
 
-namespace DayLibraryTests._2016
+namespace DayLibraryTests
 {
     [TestFixture]
     public class AOC2016_Day02Test:AOC2016_Day02
