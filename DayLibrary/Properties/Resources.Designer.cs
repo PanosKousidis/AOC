@@ -61,6 +61,231 @@ namespace DayLibrary.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day01_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day01_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day02_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day02_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day03_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day03_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day04_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day04_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day05_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day05_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day06_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day06_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day07_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day07_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day08_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day08_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day09_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day09_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day10_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day10_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day11_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day11_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day12_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day12_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day13_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day13_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day14_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day14_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day15_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day15_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day16_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day16_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day17_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day17_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day18_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day18_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day19_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day19_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day20_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day20_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day21_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day21_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day22_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day22_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day23_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day23_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day24_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day24_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2015_Day25_Input {
+            get {
+                return ResourceManager.GetString("AOC2015_Day25_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to R3, L2, L2, R4, L1, R2, R3, R4, L2, R4, L2, L5, L1, R5, R2, R2, L1, R4, R1, L5, L3, R4, R3, R1, L1, L5, L4, L2, R5, L3, L4, R3, R1, L3, R1, L3, R3, L4, R2, R5, L190, R2, L3, R47, R4, L3, R78, L1, R3, R190, R4, L3, R4, R2, R5, R3, R4, R3, L1, L4, R3, L4, R1, L4, L5, R3, L3, L4, R1, R2, L4, L3, R3, R3, L2, L5, R1, L4, L1, R5, L5, R1, R5, L4, R2, L2, R1, L5, L4, R4, R4, R3, R2, R3, L1, R4, R5, L2, L5, L4, L1, R4, L4, R4, L4, R1, R5, L1, R1, L5, R5, R1, R1, L3, L1, R4, L1, L4, L4, L3, R1, R4, R1, R1, R2, L5, L2 [rest of string was truncated]&quot;;.
         /// </summary>
         public static string AOC2016_Day01_Input {
@@ -75,6 +300,378 @@ namespace DayLibrary.Properties {
         public static string AOC2016_Day02_Input {
             get {
                 return ResourceManager.GetString("AOC2016_Day02_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 330  143  338
+        ///  769  547   83
+        ///  930  625  317
+        ///  669  866  147
+        ///   15  881  210
+        ///  662   15   70
+        ///  273  277  707
+        ///   50  592  770
+        ///  280  313  407
+        ///  642  487  372
+        ///   94  619  295
+        ///  734  243  141
+        ///  220  141  515
+        ///  198  824  745
+        ///  210  787  964
+        ///  213  627  601
+        ///  918    4  447
+        ///  805  630  802
+        ///  711  237  987
+        ///  938  552  388
+        ///  643  405  779
+        ///  803  747  525
+        ///  917  832  631
+        ///  899  292  843
+        ///   81  206  445
+        ///  141  874  465
+        ///  177  974   54
+        ///  520  725  814
+        ///  271  958  554
+        ///  779  579  264
+        ///  35 [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string AOC2016_Day03_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day03_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vxupkizork-sgmtkzoi-pkrrehkgt-zxgototm-644[kotgr]
+        ///mbiyqoxsm-pvygob-nocsqx-900[obmqs]
+        ///veqtekmrk-ikk-hitpscqirx-334[nrtws]
+        ///gvcskirmg-fyrrc-irkmriivmrk-932[rikmc]
+        ///xmtjbzidx-xviyt-yzqzgjkhzio-187[yzfeu]
+        ///bwx-amkzmb-kivlg-kwibqvo-lmaqov-798[bkmva]
+        ///vcibutulxiom-ohmnuvfy-yaa-mylpcwym-890[iyaun]
+        ///ajvyjprwp-lqxlxujcn-jwjuhbrb-251[muivb]
+        ///szfyrqriuflj-avccpsvre-kirzezex-971[rezcf]
+        ///kwvacumz-ozilm-akidmvomz-pcvb-uizsmbqvo-590[uslyz]
+        ///ucynmlgxcb-afmamjyrc-jmegqrgaq-626[rybxt]
+        ///oaxadrgx-pkq-abqdmfuaze-872[xtbnw]
+        ///t [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string AOC2016_Day04_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day04_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to uqwqemis.
+        /// </summary>
+        public static string AOC2016_Day05_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day05_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to focdealm
+        ///ggsipflx
+        ///rvibwxbm
+        ///vqrfyyrh
+        ///hsjtzpgs
+        ///ozymxpoy
+        ///jiecwags
+        ///lztseufl
+        ///dfwibwsn
+        ///skiuhnwl
+        ///kamgzqog
+        ///axeqncwa
+        ///gobivxto
+        ///nwgoryhd
+        ///tzrlitrq
+        ///uzoldxbv
+        ///zsteobha
+        ///pfcgdqkg
+        ///prcqlunp
+        ///iwivemkh
+        ///vpkilupm
+        ///ewuznabz
+        ///veaptost
+        ///cyvirffe
+        ///ejhhqfng
+        ///ibsqztgg
+        ///xzczkboh
+        ///bckhbodf
+        ///vbycgonv
+        ///esmoyyku
+        ///unccgdgj
+        ///cqwnqlzs
+        ///edoqmykb
+        ///bkvzlhyq
+        ///yzrspisn
+        ///zlzibhca
+        ///povnweaf
+        ///muyfegxe
+        ///oaojqfrl
+        ///gwesjxws
+        ///rjknfyeh
+        ///dkquvctc
+        ///cfuzhxoj
+        ///tdzzzfqc
+        ///lzjzsyni
+        ///wjfxckkf
+        ///xmhyjhop
+        ///kmtllzxs
+        ///yohearbj
+        ///ilmvyxgn
+        ///erczytzw
+        ///ku [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string AOC2016_Day06_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day06_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to xdsqxnovprgovwzkus[fmadbfsbqwzzrzrgdg]aeqornszgvbizdm
+        ///itgslvpxoqqakli[arktzcssgkxktejbno]wsgkbwwtbmfnddt[zblrboqsvezcgfmfvcz]iwyhyatqetsreeyhh
+        ///pyxuijrepsmyiacl[rskpebsqdfctoqg]hbwageeiufvcmuk[wfvdhxyzmfgmcphpfnc]aotmbcnntmdltjxuusn
+        ///mfhczaevladdsqawgp[rwabwdnwiytloldf]varesbnjnsdbsmhmsi[tyjtbpzrbfzbwlga]sznkksuymkbyxlykfqg[fyislgfghcbltaft]knrkzaldhauordwfl
+        ///piftqfdhtumcmjmsge[qrsntvxhtfurcgcynx]oyswvuklvtmivlhen[syqhqtijyiduoxb]pdtdrhijqqzvcnl[xivmeqcwyafxvnok]jvlbkrwbgcgzaqms
+        ///pfqiqyscrxhvtrjzt[unmovhoo [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string AOC2016_Day07_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day07_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rect 1x1
+        ///rotate row y=0 by 5
+        ///rect 1x1
+        ///rotate row y=0 by 5
+        ///rect 1x1
+        ///rotate row y=0 by 5
+        ///rect 1x1
+        ///rotate row y=0 by 5
+        ///rect 1x1
+        ///rotate row y=0 by 2
+        ///rect 1x1
+        ///rotate row y=0 by 2
+        ///rect 1x1
+        ///rotate row y=0 by 3
+        ///rect 1x1
+        ///rotate row y=0 by 3
+        ///rect 2x1
+        ///rotate row y=0 by 2
+        ///rect 1x1
+        ///rotate row y=0 by 3
+        ///rect 2x1
+        ///rotate row y=0 by 2
+        ///rect 1x1
+        ///rotate row y=0 by 3
+        ///rect 2x1
+        ///rotate row y=0 by 5
+        ///rect 4x1
+        ///rotate row y=0 by 5
+        ///rotate column x=0 by 1
+        ///rect 4x1
+        ///rotate row y=0 by 10
+        ///rotate column x=5 by 2 [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string AOC2016_Day08_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day08_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (4x14)JVWV(84x11)(24x2)YAFPPYWOQJKUKQTJACJAOWYF(25x11)(1x1)J(12x14)CNZKOSNAJVYL(16x3)QADCLDFUVLLZZYKX(44x15)(6x6)SUAXJM(16x4)(1x15)S(4x3)TJLZ(5x13)XVUCL(83x7)(23x9)WIIPUJELAEJXNAEOLOKNVWG(1x5)E(32x1)(17x6)SUTMAPNOOLYENSSXR(4x6)XLCF(4x14)MTLX(5x1)BSVMF(71x8)(14x6)(1x8)G(2x13)US(38x15)(8x8)ARZSGIGT(19x5)CJZJZPFJAVAMGHXJTQD(1x9)R(283x8)(35x10)(8x14)XGYQJNOH(14x10)TAHCPETVDTFJUM(103x2)(1x13)H(23x15)DPMHJRJZEFEMPVRWEVJSJKX(8x1)LZHWFQUN(28x4)BKEVJUTVRNFNLBKSGUDWIUQMUHOH(13x3)UVIUHILLVYMGG(19x4)BEJMSSZUFBNOKATZGTO [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string AOC2016_Day09_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day09_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bot 127 gives low to output 1 and high to bot 180
+        ///bot 139 gives low to bot 66 and high to bot 161
+        ///bot 171 gives low to bot 34 and high to bot 177
+        ///bot 160 gives low to bot 32 and high to bot 98
+        ///bot 3 gives low to bot 140 and high to bot 186
+        ///bot 143 gives low to bot 172 and high to bot 87
+        ///bot 154 gives low to bot 145 and high to bot 179
+        ///bot 55 gives low to bot 69 and high to bot 93
+        ///bot 52 gives low to bot 54 and high to bot 103
+        ///value 23 goes to bot 138
+        ///value 13 goes to bot 73
+        ///bot 104 gives low to b [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string AOC2016_Day10_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day10_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The first floor contains a polonium generator, a thulium generator, a thulium-compatible microchip, a promethium generator, a ruthenium generator, a ruthenium-compatible microchip, a cobalt generator, and a cobalt-compatible microchip.
+        ///The second floor contains a polonium-compatible microchip and a promethium-compatible microchip.
+        ///The third floor contains nothing relevant.
+        ///The fourth floor contains nothing relevant..
+        /// </summary>
+        public static string AOC2016_Day11_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day11_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cpy 1 a
+        ///cpy 1 b
+        ///cpy 26 d
+        ///jnz c 2
+        ///jnz 1 5
+        ///cpy 7 c
+        ///inc d
+        ///dec c
+        ///jnz c -2
+        ///cpy a c
+        ///inc a
+        ///dec b
+        ///jnz b -2
+        ///cpy c b
+        ///dec d
+        ///jnz d -6
+        ///cpy 16 c
+        ///cpy 17 d
+        ///inc a
+        ///dec d
+        ///jnz d -2
+        ///dec c
+        ///jnz c -5.
+        /// </summary>
+        public static string AOC2016_Day12_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day12_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1358.
+        /// </summary>
+        public static string AOC2016_Day13_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day13_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day14_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day14_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day15_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day15_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day16_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day16_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day17_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day17_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day18_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day18_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day19_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day19_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day20_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day20_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day21_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day21_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day22_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day22_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day23_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day23_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day24_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day24_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2016_Day25_Input {
+            get {
+                return ResourceManager.GetString("AOC2016_Day25_Input", resourceCulture);
             }
         }
         
@@ -118,6 +715,195 @@ namespace DayLibrary.Properties {
         public static string AOC2017_Day04_Input {
             get {
                 return ResourceManager.GetString("AOC2017_Day04_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day05_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day05_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day06_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day06_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day07_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day07_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day08_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day08_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day09_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day09_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day10_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day10_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day11_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day11_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day12_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day12_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day13_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day13_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day14_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day14_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day15_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day15_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day16_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day16_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day17_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day17_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day18_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day18_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day19_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day19_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day20_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day20_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day21_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day21_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day22_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day22_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day23_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day23_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day24_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day24_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AOC2017_Day25_Input {
+            get {
+                return ResourceManager.GetString("AOC2017_Day25_Input", resourceCulture);
             }
         }
     }
