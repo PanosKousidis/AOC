@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace DayLibraryTests
 {
     [TestFixture]
-    public class AOC2017_Day03Test : AOC2017_Day03
+    public class AoC2017Day03Test : AoC2017Day03
     {
         [Test]
         public void TestPart1()
@@ -15,12 +15,12 @@ namespace DayLibraryTests
             Assert.AreEqual(Part1Result(23), 2);
             Assert.AreEqual(Part1Result(1024), 31);
 
-            Assert.AreEqual(Part1Result(int.Parse(Resources.AOC2017_Day03_Input)), 326);
+            Assert.AreEqual(Part1Result(int.Parse(Resources.AoC2017_Day03_Input)), 326);
         }
         [Test]
         public void TestPart2()
         {
-            Assert.AreEqual(Part2Result(int.Parse(Resources.AOC2017_Day03_Input)), 363010);
+            Assert.AreEqual(Part2Result(int.Parse(Resources.AoC2017_Day03_Input)), 363010);
         }
     }
 }

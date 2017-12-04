@@ -1,7 +1,7 @@
 ﻿using System;
 using DayLibrary;
 
-namespace AOC
+namespace AoC
 {
     internal static class Program
     {
@@ -26,7 +26,7 @@ namespace AOC
                     break;
                 try
                 {
-                    var handle = Activator.CreateInstance("DayLibrary", $"DayLibrary.AOC{Year}_Day{dayNo:00}");
+                    var handle = Activator.CreateInstance("DayLibrary", $"DayLibrary.AoC{Year}_Day{dayNo:00}");
                     var day = (DayBase) handle.Unwrap();
 
                     Console.WriteLine();

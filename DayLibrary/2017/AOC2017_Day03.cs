@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Security.Cryptography;
 using Common.Enum;
 using Common.Helpers;
 using DayLibrary.Properties;
 
 namespace DayLibrary
 {
-    public class AOC2017_Day03 : DayBase
+    public class AoC2017Day03 : DayBase
     {
-        private readonly string _commonInput = Resources.AOC2017_Day03_Input;
+        private readonly string _commonInput = Resources.AoC2017_Day03_Input;
         protected override string InputPart1 => _commonInput;
         protected override string InputPart2 => _commonInput;
         protected override void Part1(string input)
@@ -56,7 +55,7 @@ namespace DayLibrary
 
         protected int Part2Result(int input)
         {
-            dic = new Dictionary<Point, int>();
+            _dic = new Dictionary<Point, int>();
             var p = new MovingIn2D()
             {
                 Face = ECardinals.Down,
@@ -64,7 +63,7 @@ namespace DayLibrary
                 LocationY = 0,
             };
             var currentNo = 1;
-            dic.Add(new Point(0,0),1);
+            _dic.Add(new Point(0,0),1);
             var reps = 0;
             while (currentNo != input)
             {
@@ -77,7 +76,7 @@ namespace DayLibrary
                         p.MoveForward(1, true, true);
                         currentNo = GetCurrentNo(new Point(p.LocationX, p.LocationY));
                         if (input < currentNo) return currentNo;
-                        dic.Add(new Point(p.LocationX, p.LocationY), currentNo);
+                        _dic.Add(new Point(p.LocationX, p.LocationY), currentNo);
                         rep++;
                     }
                 }
@@ -93,14 +92,14 @@ namespace DayLibrary
             {
                 for (var j = -1; j < 2; j++)
                 {
-                    if(dic.ContainsKey(new Point(p.X + i, p.Y + j)))
-                        sum += dic[new Point(p.X + i, p.Y + j)];
+                    if(_dic.ContainsKey(new Point(p.X + i, p.Y + j)))
+                        sum += _dic[new Point(p.X + i, p.Y + j)];
                 }
             }
             return sum;
         }
 
-        private Dictionary<Point, int> dic;
+        private Dictionary<Point, int> _dic;
 
     }
 

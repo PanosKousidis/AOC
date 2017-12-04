@@ -1,11 +1,10 @@
 ﻿using DayLibrary;
-using DayLibrary.Properties;
 using NUnit.Framework;
 
 namespace DayLibraryTests
 {
     [TestFixture]
-    public class AOC2016_Day03Test:AOC2016_Day03
+    public class AoC2016Day03Test:AoC2016Day03
     {
         [Test]
         public void TestPart1()

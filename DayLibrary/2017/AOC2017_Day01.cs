@@ -3,9 +3,9 @@ using DayLibrary.Properties;
 
 namespace DayLibrary
 {
-    public class AOC2017_Day01:DayBase
+    public class AoC2017Day01:DayBase
     {
-        private readonly string _commonInput = Resources.AOC2017_Day01_Input;
+        private readonly string _commonInput = Resources.AoC2017_Day01_Input;
         protected override string InputPart1 => _commonInput;
         protected override string InputPart2 => _commonInput;
 

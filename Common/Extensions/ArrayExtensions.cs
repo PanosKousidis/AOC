@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using Common.Enum;
 
 namespace Common.Extensions
 {

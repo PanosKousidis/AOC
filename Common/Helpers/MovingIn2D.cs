@@ -101,7 +101,7 @@ namespace Common.Helpers
                         {
                             return Map[new Point(x, y)].ToString() != InvalidDestinationString;
                         }
-                        catch (Exception e)
+                        catch (Exception)
                         {
                             return bAllowNewLocations;
                         }

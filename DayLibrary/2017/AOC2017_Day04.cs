@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
-using Common.Enum;
-using Common.Helpers;
 using DayLibrary.Properties;
 
 namespace DayLibrary
 {
-    public class AOC2017_Day04 : DayBase
+    public class AoC2017Day04 : DayBase
     {
-        private readonly string _commonInput = Resources.AOC2017_Day04_Input;
+        private readonly string _commonInput = Resources.AoC2017_Day04_Input;
         protected override string InputPart1 => _commonInput;
         protected override string InputPart2 => _commonInput;
         protected override void Part1(string input)

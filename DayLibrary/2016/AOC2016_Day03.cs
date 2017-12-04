@@ -1,15 +1,11 @@
 using System;
-using System.Linq;
-using Common.Enum;
-using Common.Extensions;
-using Common.Helpers;
 using DayLibrary.Properties;
 
 namespace DayLibrary
 {
-    public class AOC2016_Day03 : DayBase
+    public class AoC2016Day03 : DayBase
     {
-        private readonly string _input = Resources.AOC2016_Day03_Input;
+        private readonly string _input = Resources.AoC2016_Day03_Input;
         protected override string InputPart1 => _input;
         protected override string InputPart2 => _input;
        // private bool _bDone;

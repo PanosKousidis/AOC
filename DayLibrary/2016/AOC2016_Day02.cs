@@ -7,9 +7,9 @@ using DayLibrary.Properties;
 
 namespace DayLibrary
 {
-    public class AOC2016_Day02 : DayBase
+    public class AoC2016Day02 : DayBase
     {
-        private readonly string _input = Resources.AOC2016_Day02_Input;
+        private readonly string _input = Resources.AoC2016_Day02_Input;
         protected override string InputPart1 => _input;
         protected override string InputPart2 => _input;
        // private bool _bDone;
