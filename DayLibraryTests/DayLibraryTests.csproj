@@ -50,6 +50,7 @@
     <Compile Include="2016\AOC2016_Day01Test.cs" />
     <Compile Include="2017\AOC2017_Day01Test.cs" />
     <Compile Include="2017\AOC2017_Day02Test.cs" />
+    <Compile Include="2017\AOC2017_Day05Test.cs" />
     <Compile Include="2017\AOC2017_Day04Test.cs" />
     <Compile Include="2017\AOC2017_Day03Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
