@@ -26,7 +26,7 @@ namespace AoC
                     break;
                 try
                 {
-                    var handle = Activator.CreateInstance("DayLibrary", $"DayLibrary.AoC{Year}_Day{dayNo:00}");
+                    var handle = Activator.CreateInstance("DayLibrary", $"DayLibrary.AoC{Year}Day{dayNo:00}");
                     var day = (DayBase) handle.Unwrap();
 
                     Console.WriteLine();

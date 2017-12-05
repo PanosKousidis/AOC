@@ -31,6 +31,7 @@ namespace DayLibrary
             }
             catch (IndexOutOfRangeException)
             {
+                //result found
             }
             return currentSteps;
 
@@ -41,9 +42,27 @@ namespace DayLibrary
             Console.WriteLine(Part2Result(input));
         }
 
-        protected static string Part2Result(string input)
+        protected static int Part2Result(string input)
         {
-            return null;
+            var dic = input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+
+            var currentIndex = 0;
+            var currentSteps = 0;
+            try
+            {
+                while (true)
+                {
+                    var tmp = currentIndex;
+                    currentIndex += dic[currentIndex];
+                    dic[tmp] += dic[tmp] >= 3 ? -1 : 1;
+                    currentSteps += 1;
+                }
+            }
+            catch (IndexOutOfRangeException)
+            {
+                //result found
+            }
+            return currentSteps;
         }
      
     }

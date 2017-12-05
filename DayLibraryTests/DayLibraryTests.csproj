@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2016\AOC2016_Day04Test.cs" />
     <Compile Include="2016\AOC2016_Day03Test.cs" />
     <Compile Include="2016\AOC2016_Day02Test.cs" />
     <Compile Include="2016\AOC2016_Day01Test.cs" />

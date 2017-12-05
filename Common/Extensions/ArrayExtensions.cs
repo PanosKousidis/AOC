@@ -63,6 +63,11 @@ namespace Common.Extensions
             return dic;
         }
 
+        public static char Shift(this string word, char c, int n)
+        {
+            return word[(word.IndexOf(c) + n) % word.Length];
+        }
+
     }
 
 }

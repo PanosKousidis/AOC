@@ -1,4 +1,6 @@
 using System;
+using System.Text;
+using Common.Helpers;
 using DayLibrary.Properties;
 
 namespace DayLibrary
@@ -15,9 +17,16 @@ namespace DayLibrary
             Console.WriteLine(p);
         }
 
-        protected static string Part1Result(string input)
+        protected static int Part1Result(string input)
         {
-            return null;
+            var iPossible = 0;
+            foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                var dim = line.Split(new[] { " ", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+                var t = new Triangle(int.Parse(dim[0]), int.Parse(dim[1]), int.Parse(dim[2]));
+                if (t.IsPossible()) iPossible++;
+            }
+            return iPossible;
         }
 
         protected override void Part2(string input)
@@ -25,9 +34,26 @@ namespace DayLibrary
             var p = Part2Result(input);
             Console.WriteLine(p);
         }
-        protected static string Part2Result(string input)
+        protected static int Part2Result(string input)
         {
-            return null;
+            var iPossible = 0;
+            var linesRead = 0;
+            var trianglesInput = new StringBuilder();
+            foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                linesRead++;
+                trianglesInput.AppendLine(line);
+                if (linesRead != 3) continue;
+                var dim = trianglesInput.ToString().Split(new[] { " ", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+                for (var i = 0; i < 3; i++)
+                {
+                    var t = new Triangle(int.Parse(dim[i]), int.Parse(dim[i+3]), int.Parse(dim[i+6]));
+                    if (t.IsPossible()) iPossible++;
+                }
+                linesRead = 0;
+                trianglesInput.Clear();
+            }
+            return iPossible;
         }
 
     }

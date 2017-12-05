@@ -16,7 +16,8 @@ namespace DayLibraryTests
         [Test]
         public void TestPart2()
         {
-            //Assert.AreEqual(Part2Result(Resources.AoC2017_Day05_Input), 0);
+            Assert.AreEqual(Part2Result("0\r\n3\r\n0\r\n1\r\n-3\r\n"), 10);
+            Assert.AreEqual(Part2Result(Resources.AoC2017_Day05_Input), 27283023);
         }
     }
 }
