@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using DayLibrary.Properties;
 
 namespace DayLibrary
@@ -13,9 +14,26 @@ namespace DayLibrary
             Console.WriteLine(Part1Result(input));
         }
 
-        protected static string Part1Result(string input)
+        protected static int Part1Result(string input)
         {
-            return null;
+            var dic = input.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            var currentIndex = 0;
+            var currentSteps = 0;
+            try
+            {
+                while (true)
+                {
+                    var tmp = currentIndex;
+                    currentIndex += dic[currentIndex];
+                    dic[tmp] += 1;
+                    currentSteps += 1;
+                }
+            }
+            catch (IndexOutOfRangeException)
+            {
+            }
+            return currentSteps;
+
         }
 
         protected override void Part2(string input)
