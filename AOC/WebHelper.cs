@@ -18,7 +18,9 @@ namespace AoC
                 var wb = new WebBrowser();
                 wb.Navigate($"http://adventofcode.com/{year}/day/{day}/input");
                 while (wb.ReadyState != WebBrowserReadyState.Complete) { Application.DoEvents(); }
-                var s = wb.Document.Body.InnerText;
+                var s = wb.Document?.Body?.InnerText;
+                if (s == null) return null;
+                if (s.Contains("HTTP 404")) return null;
                 File.WriteAllText(filename, s);
                 return s;
             }

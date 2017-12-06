@@ -1,7 +1,4 @@
-﻿using System.Threading;
-using AoC;
-using DayLibrary;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace DayLibraryTests
 {

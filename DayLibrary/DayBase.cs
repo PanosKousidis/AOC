@@ -1,9 +1,4 @@
-﻿using System;
-using System.Net;
-using System.Reflection;
-using System.Text.RegularExpressions;
-
-namespace DayLibrary
+﻿namespace DayLibrary
 {
     public abstract class DayBase
     {

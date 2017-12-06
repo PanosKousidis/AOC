@@ -1,5 +1,3 @@
-using AoC;
-using DayLibrary;
 using NUnit.Framework;
 
 namespace DayLibraryTests
@@ -10,12 +8,12 @@ namespace DayLibraryTests
         [Test]
         public void TestPart1()
         {
-            Assert.AreEqual(TestPart1(null),null);
+            //Assert.AreEqual(TestPart1(null),null);
         }
         [Test]
         public void TestPart2()
         {
-            Assert.AreEqual(TestPart2(null),null);
+            //Assert.AreEqual(TestPart2(null),null);
         }
     }
 }

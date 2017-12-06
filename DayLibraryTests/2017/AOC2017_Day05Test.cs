@@ -1,5 +1,3 @@
-using AoC;
-using DayLibrary;
 using NUnit.Framework;
 
 namespace DayLibraryTests

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DayLibrary
+﻿namespace DayLibrary
 {
     public class AoC2017Day01:DayBase
     {
