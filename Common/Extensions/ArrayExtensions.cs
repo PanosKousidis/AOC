@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -68,6 +69,19 @@ namespace Common.Extensions
             return word[(word.IndexOf(c) + n) % word.Length];
         }
 
+        public static int GetIndexWithMaxValue(this int[] e)
+        {
+            var max = 0;
+            var index = 0;
+
+            for (var i = 0; i < e.Length; i++)
+            {
+                if (e[i] <= max) continue;
+                max = e[i];
+                index = i;
+            }
+            return index;
+        } 
     }
 
 }

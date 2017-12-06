@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Mime;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using DayLibrary;
 
 namespace AoC

@@ -850,7 +850,7 @@ namespace DayLibrary.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to 10	3	15	10	5	15	5	15	9	2	5	8	5	2	3	6.
         /// </summary>
         public static string AoC2017_Day06_Input {
             get {
