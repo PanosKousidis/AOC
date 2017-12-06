@@ -2,24 +2,14 @@
 using System.Linq;
 using Common.Enum;
 using Common.Helpers;
-using DayLibrary.Properties;
 
 namespace DayLibrary
 {
     public class AoC2016Day01 : DayBase
     {
-        private readonly string _input = Resources.AoC2016_Day01_Input;
-        protected override string InputPart1 => _input;
-        protected override string InputPart2 => _input;
         private bool _bDone;
-        protected override void Part1(string input)
-        {
-            var p = Part1Result(input);
-            //Console.WriteLine(p.LocationX + "," + p.LocationY);
-            Console.WriteLine(p.DistanceFrom(0, 0));
-        }
 
-        protected MovingIn2D Part1Result(string input)
+        public override string Part1(string input)
         {
             var person = new MovingIn2D();
 
@@ -28,16 +18,10 @@ namespace DayLibrary
                 person.Turn(ParseTurnOrders(direction));
                 person.MoveForward(ParseSteps(direction), false, true);
             }
-            return person;
+            return person.DistanceFrom(0,0).ToString();
         }
 
-        protected override void Part2(string input)
-        {
-            var p = Part2Result(input);
-            //Console.WriteLine(p.LocationX + "," + p.LocationY);
-            Console.WriteLine(p.DistanceFrom(0, 0));
-        }
-        protected MovingIn2D Part2Result(string input)
+        public override string Part2(string input)
         {
             _bDone = false;
             var person = new MovingIn2D();
@@ -49,7 +33,7 @@ namespace DayLibrary
                 person.MoveForward(ParseSteps(direction), true, true);
                 if (_bDone) break;
             }
-            return person;
+            return person.DistanceFrom(0,0).ToString();
         }
 
         private void OnAlreadyVisited(MovingIn2D sender, int x, int y)

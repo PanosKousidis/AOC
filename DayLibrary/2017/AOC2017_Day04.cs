@@ -1,25 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using DayLibrary.Properties;
 
 namespace DayLibrary
 {
     public class AoC2017Day04 : DayBase
     {
-        private readonly string _commonInput = Resources.AoC2017_Day04_Input;
-        protected override string InputPart1 => _commonInput;
-        protected override string InputPart2 => _commonInput;
-        protected override void Part1(string input)
-        {
-            Console.WriteLine(Part1Result(input));
-        }
-
-        protected static int Part1Result(string input)
+        public override string Part1(string input)
         {
             var sum = 0;
-            foreach (var line in input.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
             {
-               var h = new HashSet<string>();
+                var h = new HashSet<string>();
                 var isValid = true;
                 foreach (var word in line.Split(' '))
                 {
@@ -28,20 +19,14 @@ namespace DayLibrary
                         isValid = false;
                         break;
                     }
-                        h.Add(word);
+                    h.Add(word);
                 }
                 sum += isValid ? 1 : 0;
             }
-            return sum;
+            return sum.ToString();
         }
 
-
-        protected override void Part2(string input)
-        {
-            Console.WriteLine(Part2Result(input));
-        }
-
-        protected static int Part2Result(string input)
+        public override string Part2(string input)
         {
             var sum = 0;
             foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
@@ -62,9 +47,8 @@ namespace DayLibrary
                 }
                 sum += isValid ? 1 : 0;
             }
-            return sum;
+            return sum.ToString();
         }
-     
     }
 
    

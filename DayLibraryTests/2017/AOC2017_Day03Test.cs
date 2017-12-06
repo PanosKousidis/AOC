@@ -1,26 +1,25 @@
-﻿using DayLibrary;
-using DayLibrary.Properties;
+﻿using AoC;
+using DayLibrary;
 using NUnit.Framework;
 
 namespace DayLibraryTests
 {
     [TestFixture]
-    public class AoC2017Day03Test : AoC2017Day03
+    public class AoC2017Day03Test : DayTest
     {
         [Test]
         public void TestPart1()
         {
-            Assert.AreEqual(Part1Result(1),0);
-            Assert.AreEqual(Part1Result(12), 3);
-            Assert.AreEqual(Part1Result(23), 2);
-            Assert.AreEqual(Part1Result(1024), 31);
-
-            Assert.AreEqual(Part1Result(int.Parse(Resources.AoC2017_Day03_Input)), 326);
+            Assert.AreEqual(TestPart1("1"),"0");
+            Assert.AreEqual(TestPart1("12"), "3");
+            Assert.AreEqual(TestPart1("23"), "2");
+            Assert.AreEqual(TestPart1("1024"), "31");
+            Assert.AreEqual(TestPart1(null), "326");
         }
         [Test]
         public void TestPart2()
         {
-            Assert.AreEqual(Part2Result(int.Parse(Resources.AoC2017_Day03_Input)), 363010);
+            Assert.AreEqual(TestPart2(null), "363010");
         }
     }
 }

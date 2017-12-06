@@ -1,22 +1,15 @@
-﻿namespace DayLibrary
+﻿using System;
+using System.Net;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace DayLibrary
 {
     public abstract class DayBase
     {
-        protected abstract string InputPart1 { get; }
-        protected abstract string InputPart2 { get; }
-
-        public void RunPart1()
-        {
-            Part1(InputPart1);
-        }
-
-        public void RunPart2()
-        {
-            Part2(InputPart2);
-        }
-
-        protected abstract void Part1(string input);
-        protected abstract void Part2(string input);
+        public abstract string Part1(string input);
+        public abstract string Part2(string input);
 
     }
+
 }

@@ -1,24 +1,21 @@
 ﻿using System;
-using DayLibrary.Properties;
 
 namespace DayLibrary
 {
     public class AoC2017Day01:DayBase
     {
-        private readonly string _commonInput = Resources.AoC2017_Day01_Input;
-        protected override string InputPart1 => _commonInput;
-        protected override string InputPart2 => _commonInput;
 
-        protected override void Part1(string input)
+        public override string Part1(string input)
         {
-            Console.WriteLine(CyclicSequence(input, 1));
+            return CyclicSequence(input, 1).ToString();
         }
 
-        protected override void Part2(string input)
+        public override string Part2(string input)
         {
-            Console.WriteLine(CyclicSequence(input, input.Length / 2));
+            return CyclicSequence(input, input.Length / 2).ToString();
         }
-        protected static int CyclicSequence(string input, int feed)
+
+       protected static int CyclicSequence(string input, int feed)
         {
             var sum = 0;
             for (var i = 0; i < input.Length; i++)

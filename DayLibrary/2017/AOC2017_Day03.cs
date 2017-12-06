@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using System.Drawing;
 using Common.Enum;
 using Common.Helpers;
-using DayLibrary.Properties;
 
 namespace DayLibrary
 {
     public class AoC2017Day03 : DayBase
     {
-        private readonly string _commonInput = Resources.AoC2017_Day03_Input;
-        protected override string InputPart1 => _commonInput;
-        protected override string InputPart2 => _commonInput;
-        protected override void Part1(string input)
+
+        public override string Part1(string input)
         {
-            Console.WriteLine(Part1Result(int.Parse(input)));
+            return Part1Result(int.Parse(input)).ToString();
         }
 
         protected static int Part1Result(int input)
@@ -47,10 +44,10 @@ namespace DayLibrary
             return 0;
         }
 
-       
-        protected override void Part2(string input)
+
+        public override string Part2(string input)
         {
-            Console.WriteLine(Part2Result(int.Parse(input)));
+            return Part2Result(int.Parse(input)).ToString();
         }
 
         protected int Part2Result(int input)

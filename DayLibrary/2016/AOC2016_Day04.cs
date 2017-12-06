@@ -5,50 +5,33 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Common.Extensions;
 using Common.Helpers;
-using DayLibrary.Properties;
 
 namespace DayLibrary
 {
     public class AoC2016Day04 : DayBase
     {
-        private readonly string _input = Resources.AoC2016_Day04_Input;
-        protected override string InputPart1 => _input;
-        protected override string InputPart2 => _input;
-        protected override void Part1(string input)
+
+        public override string Part1(string input)
         {
-            var p = Part1Result(input);
-            Console.WriteLine(p);
+            return input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(Room.CreateRoom).Where(room => room.IsReal).Sum(room => room.SectorId).ToString();
         }
 
-        protected static int Part1Result(string input)
+        public override string Part2(string input)
         {
-            return input.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries)
-                .Select(Room.CreateRoom).Where(room => room.IsReal).Sum(room => room.SectorId);
-        }
-
-        protected override void Part2(string input)
-        {
-            var p = Part2Result(input);
-            Console.WriteLine(p);
-        }
-        protected static int Part2Result(string input)
-        {
-            var realRoomSectorIds = 0;
-
             foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
             {
                 var room = Room.CreateRoom(line);
                 if (!room.IsReal) continue;
-                realRoomSectorIds += room.SectorId;
                 var decryptedName = room.DecryptedName;
                 if (decryptedName.ToLower().Contains("north"))
                 {
-                    return room.SectorId;
+                    return room.SectorId.ToString();
                 }
             }
-            return 0;
+            return "";
         }
-
+       
         private class Room
         {
             private string EncryptedName { get; set; }

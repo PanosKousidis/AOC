@@ -6,12 +6,15 @@ using System.Net;
 using System.Net.Mime;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Windows.Forms;
+using Common.Helpers;
 using DayLibrary;
 
 namespace AoC
 {
     internal static class Program
     {
+        [STAThread]
         private static void Main()
         {
             var yearNo = -1;
@@ -46,13 +49,13 @@ namespace AoC
                 {
                     var handle = Activator.CreateInstance("DayLibrary", $"DayLibrary.AoC{yearNo}Day{dayNo:00}");
                     var day = (DayBase) handle.Unwrap();
-
+                    var input = WebHelper.GetInput(yearNo, dayNo);
                     Console.WriteLine();
                     Console.WriteLine("Part 1");
-                    day.RunPart1();
+                    Console.WriteLine(day.Part1(input));
                     Console.WriteLine();
                     Console.WriteLine("Part 2");
-                    day.RunPart2();
+                    Console.WriteLine(day.Part2(input));
                     Console.WriteLine();
                 }
                 catch (TypeLoadException)

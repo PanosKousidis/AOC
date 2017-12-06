@@ -1,25 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common.Extensions;
-using DayLibrary.Properties;
 
 namespace DayLibrary
 {
     public class AoC2017Day02: DayBase
     {
-        private readonly string _commonInput = Resources.AoC2017_Day02_Input;
-        protected override string InputPart1 => _commonInput;
-        protected override string InputPart2 => _commonInput;
 
-        protected override void Part1(string input)
+        public override string Part1(string input)
         {
-            var arr = input.StringTo2ArrayOfArrays("\t");
-            Console.WriteLine(CalcCheckSumMinMax(arr));
+            return CalcCheckSumMinMax(input.StringTo2ArrayOfArrays("\t")).ToString();
         }
-        protected override void Part2(string input)
+        public override string Part2(string input)
         {
-            var arr = input.StringTo2ArrayOfArrays("\t");
-            Console.WriteLine(CalcCheckSumMod(arr));
+            return CalcCheckSumMod(input.StringTo2ArrayOfArrays("\t")).ToString();
         }
 
         protected static int CalcCheckSumMinMax(IEnumerable<IEnumerable<string>> arr)

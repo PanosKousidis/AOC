@@ -1,40 +1,22 @@
 using System;
+using System.Linq;
 using System.Text;
 using Common.Helpers;
-using DayLibrary.Properties;
 
 namespace DayLibrary
 {
     public class AoC2016Day03 : DayBase
     {
-        private readonly string _input = Resources.AoC2016_Day03_Input;
-        protected override string InputPart1 => _input;
-        protected override string InputPart2 => _input;
-       // private bool _bDone;
-        protected override void Part1(string input)
+        public override string Part1(string input)
         {
-            var p = Part1Result(input);
-            Console.WriteLine(p);
+            var iPossible = input.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries)
+                .Select(line => line.Split(new[] {" ", "\r\n"}, StringSplitOptions.RemoveEmptyEntries))
+                .Select(dim => new Triangle(int.Parse(dim[0]), int.Parse(dim[1]), int.Parse(dim[2])))
+                .Count(t => t.IsPossible());
+            return iPossible.ToString();
         }
 
-        protected static int Part1Result(string input)
-        {
-            var iPossible = 0;
-            foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
-            {
-                var dim = line.Split(new[] { " ", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
-                var t = new Triangle(int.Parse(dim[0]), int.Parse(dim[1]), int.Parse(dim[2]));
-                if (t.IsPossible()) iPossible++;
-            }
-            return iPossible;
-        }
-
-        protected override void Part2(string input)
-        {
-            var p = Part2Result(input);
-            Console.WriteLine(p);
-        }
-        protected static int Part2Result(string input)
+        public override string Part2(string input)
         {
             var iPossible = 0;
             var linesRead = 0;
@@ -47,14 +29,13 @@ namespace DayLibrary
                 var dim = trianglesInput.ToString().Split(new[] { " ", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
                 for (var i = 0; i < 3; i++)
                 {
-                    var t = new Triangle(int.Parse(dim[i]), int.Parse(dim[i+3]), int.Parse(dim[i+6]));
+                    var t = new Triangle(int.Parse(dim[i]), int.Parse(dim[i + 3]), int.Parse(dim[i + 6]));
                     if (t.IsPossible()) iPossible++;
                 }
                 linesRead = 0;
                 trianglesInput.Clear();
             }
-            return iPossible;
+            return iPossible.ToString();
         }
-
     }
 }
