@@ -12,13 +12,24 @@ namespace AoC
 {
     internal static class Program
     {
-        private const string Year = "2016";
-        //private const string Year = "2017";
-
         private static void Main()
         {
+            var yearNo = -1;
+            while (yearNo != 0 && yearNo !=2016 && yearNo !=2017)
+            {
+                Console.Write("Enter AoC year (2016, 2017 or 0 to exit): ");
+                if (int.TryParse(Console.ReadLine(), out yearNo))
+                {
+                    if (yearNo == 0)
+                        return;
+                }
+                else
+                {
+                    yearNo = -1;
+                }
+            }
             Console.WriteLine("------------------------------");
-            Console.WriteLine("   Advent of Code Year " + Year);
+            Console.WriteLine("   Advent of Code Year " + yearNo);
             Console.WriteLine("------------------------------");
             var dayNo = -1;
             while (dayNo != 0)
@@ -33,7 +44,7 @@ namespace AoC
                     break;
                 try
                 {
-                    var handle = Activator.CreateInstance("DayLibrary", $"DayLibrary.AoC{Year}Day{dayNo:00}");
+                    var handle = Activator.CreateInstance("DayLibrary", $"DayLibrary.AoC{yearNo}Day{dayNo:00}");
                     var day = (DayBase) handle.Unwrap();
 
                     Console.WriteLine();
