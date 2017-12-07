@@ -7,8 +7,6 @@ namespace DayLibrary
 {
     public class AoC2017Day06 : DayBase
     {
-
-
         public override string Part1(string input)
         {
             var banks = input.Split(new[] { "\t" }, StringSplitOptions.RemoveEmptyEntries).Select(s => Convert.ToInt32(s)).ToArray();
