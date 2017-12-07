@@ -52,17 +52,18 @@
     <Compile Include="..\AOC\WebHelper.cs">
       <Link>WebHelper.cs</Link>
     </Compile>
-    <Compile Include="2016\AOC2016_Day04Test.cs" />
-    <Compile Include="2016\AOC2016_Day03Test.cs" />
-    <Compile Include="2016\AOC2016_Day02Test.cs" />
-    <Compile Include="2016\AOC2016_Day01Test.cs" />
-    <Compile Include="2017\AOC2017_Day01Test.cs" />
-    <Compile Include="2017\AOC2017_Day02Test.cs" />
-    <Compile Include="2017\AOC2017_Day07Test.cs" />
-    <Compile Include="2017\AOC2017_Day06Test.cs" />
-    <Compile Include="2017\AOC2017_Day05Test.cs" />
-    <Compile Include="2017\AOC2017_Day04Test.cs" />
-    <Compile Include="2017\AOC2017_Day03Test.cs" />
+    <Compile Include="2016\AoC2016Day04Test.cs" />
+    <Compile Include="2016\AoC2016Day03Test.cs" />
+    <Compile Include="2016\AoC2016Day02Test.cs" />
+    <Compile Include="2016\AoC2016Day01Test.cs" />
+    <Compile Include="2017\AoC2017Day01Test.cs" />
+    <Compile Include="2017\AoC2017Day02Test.cs" />
+    <Compile Include="2017\AoC2017Day08Test.cs" />
+    <Compile Include="2017\AoC2017Day07Test.cs" />
+    <Compile Include="2017\AoC2017Day06Test.cs" />
+    <Compile Include="2017\AoC2017Day05Test.cs" />
+    <Compile Include="2017\AoC2017Day04Test.cs" />
+    <Compile Include="2017\AoC2017Day03Test.cs" />
     <Compile Include="DayTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

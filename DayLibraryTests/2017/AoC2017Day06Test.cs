@@ -8,14 +8,14 @@ namespace DayLibraryTests
         [Test]
         public void TestPart1()
         {
-            Assert.AreEqual(TestPart1("0\t2\t7\t0"), "5");
-            Assert.AreEqual(TestPart1(null), "14029");
+            Assert.AreEqual("5", TestPart1("0\t2\t7\t0"));
+            Assert.AreEqual("14029", TestPart1(null));
         }
         [Test]
         public void TestPart2()
         {
-            Assert.AreEqual(TestPart2("0\t2\t7\t0"), "4");
-            Assert.AreEqual(TestPart2(null), "2765");
+            Assert.AreEqual("4", TestPart2("0\t2\t7\t0"));
+            Assert.AreEqual("2765", TestPart2(null));
         }
     }
 }
