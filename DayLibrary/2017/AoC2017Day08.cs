@@ -11,7 +11,22 @@ namespace DayLibrary
     {
         public override string Part1(string input)
         {
+            const string regex = "(\\w*)\\s(\\w*)\\s([-]*\\d*)\\sif\\s(\\w*)\\s([<>=!]*)\\s([-]*\\d*)";
+            foreach (var line in input.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries))
+            {
+                var r = new Regex(regex);
+                var m = r.Match(input);
+
+            }
+
+            
             return null;
+        }
+
+        public void Execute(string register, string command, int commandvalue, string register2, string op,
+            int conditionvalue)
+        {
+            
         }
 
         public override string Part2(string input)
