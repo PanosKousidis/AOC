@@ -58,6 +58,7 @@
     <Compile Include="2016\AoC2016Day01Test.cs" />
     <Compile Include="2017\AoC2017Day01Test.cs" />
     <Compile Include="2017\AoC2017Day02Test.cs" />
+    <Compile Include="2017\AoC2017Day09Test.cs" />
     <Compile Include="2017\AoC2017Day08Test.cs" />
     <Compile Include="2017\AoC2017Day07Test.cs" />
     <Compile Include="2017\AoC2017Day06Test.cs" />
