@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace AoC
 {
-    public class WebHelper
+    public static class WebHelper
     {
 
         public static string GetInput(int year, int day)
