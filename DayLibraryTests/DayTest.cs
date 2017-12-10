@@ -12,22 +12,22 @@ namespace DayLibraryTests
         private int Day => int.Parse(Regex.Match(GetType().Name, Reg).Groups[2].Value);
         private DayBase ThisDay => (DayBase)Activator.CreateInstance("DayLibrary", $"DayLibrary.AoC{Year}Day{Day:00}").Unwrap();
 
-        protected string TestPart1(string input)
+        protected string TestPart1(string input, object args = null)
         {
             if (input == null)
             {
                 input = WebHelper.GetInput(Year, Day);
             }
-            return ThisDay.Part1(input);
+            return args == null ? ThisDay.Part1(input) : ThisDay.Part1(input, args);
         }
 
-        protected string TestPart2(string input)
+        protected string TestPart2(string input, object args = null)
         {
             if (input == null)
             {
                 input = WebHelper.GetInput(Year, Day);
             }
-            return ThisDay.Part2(input);
+            return args == null ? ThisDay.Part2(input) : ThisDay.Part2(input, args);
         }
     }
 }
