@@ -1,6 +1,5 @@
 using System;
 using System.Drawing;
-using System.Xml.Linq;
 
 namespace DayLibrary
 {
