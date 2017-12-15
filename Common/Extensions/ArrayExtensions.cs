@@ -14,7 +14,7 @@ namespace Common.Extensions
             var ret = new string[lines.Length][];
             for (var i = 0; i < lines.Length; i++)
             {
-                var columns = lines[i].Split(new[] { columnDelimiter }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+                var columns = columnDelimiter=="" ? lines[i].ToCharArray().Select(c=> c.ToString()).ToArray() : lines[i].Split(new[] { columnDelimiter }, StringSplitOptions.RemoveEmptyEntries).ToArray();
                 ret[i] = new string[columns.Length];
                 for (var j = 0; j < columns.Length; j++)
                 {

@@ -14,7 +14,7 @@ namespace DayLibrary
         }
         public override string Part2(string input)
         {
-            return Part2(input, 256);
+            return GetKnotHash(input);
         }
 
         public override string Part1(string input, object args)
@@ -25,16 +25,15 @@ namespace DayLibrary
             return (arr[0]*arr[1]).ToString();
         }
        
-        public override string Part2(string input, object args)
+        public static string GetKnotHash(string input)
         {
-            var arr = Enumerable.Range(0, int.Parse(args.ToString())).ToArray();
+            var arr = Enumerable.Range(0, 256).ToArray();
             var commands = GetAsciiArray(input);
-            commands = commands.Concat(new [] {17, 31, 73, 47, 23}).ToArray();
+            commands = commands.Concat(new[] { 17, 31, 73, 47, 23 }).ToArray();
             arr = GetSparseHash(arr, commands, 64);
             arr = GetDenseHash(arr);
             return GetHexValue(arr);
         }
-
 
         private static int[] GetAsciiArray(string input)
         {
