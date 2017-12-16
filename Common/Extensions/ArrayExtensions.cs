@@ -67,6 +67,15 @@ namespace Common.Extensions
         {
             return word[(word.IndexOf(c) + n) % word.Length];
         }
+        public static char[] Shift(this char[] arr, int number)
+        {
+            var arr2 = new char[arr.Length];
+            for(var i = 0; i<arr.Length;i++)
+            {
+                arr2[i] = arr[(arr.Length - number + i) % arr.Length];
+            }
+            return arr2;
+        }
 
         public static int GetIndexWithMaxValue(this int[] e)
         {
