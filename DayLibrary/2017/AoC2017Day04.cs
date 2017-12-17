@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Extensions;
+using System;
 using System.Collections.Generic;
 
 namespace DayLibrary
@@ -8,7 +9,7 @@ namespace DayLibrary
         public override string Part1(string input)
         {
             var sum = 0;
-            foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var line in input.Lines())
             {
                 var h = new HashSet<string>();
                 var isValid = true;
@@ -29,7 +30,7 @@ namespace DayLibrary
         public override string Part2(string input)
         {
             var sum = 0;
-            foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var line in input.Lines())
             {
                 var h = new HashSet<string>();
                 var isValid = true;

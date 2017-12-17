@@ -9,7 +9,7 @@ namespace Common.Extensions
     {
         public static string[][] StringTo2ArrayOfArrays(this string input, string columnDelimiter)
         {
-            var lines = input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            var lines = input.Lines();
 
             var ret = new string[lines.Length][];
             for (var i = 0; i < lines.Length; i++)

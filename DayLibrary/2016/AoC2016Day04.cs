@@ -12,13 +12,13 @@ namespace DayLibrary
 
         public override string Part1(string input)
         {
-            return input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries)
+            return input.Lines()
                 .Select(Room.CreateRoom).Where(room => room.IsReal).Sum(room => room.SectorId).ToString();
         }
 
         public override string Part2(string input)
         {
-            foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var line in input.Lines())
             {
                 var room = Room.CreateRoom(line);
                 if (!room.IsReal) continue;

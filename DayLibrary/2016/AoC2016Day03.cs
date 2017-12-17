@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Text;
+using Common.Extensions;
 using Common.Helpers;
 
 namespace DayLibrary
@@ -21,7 +22,7 @@ namespace DayLibrary
             var iPossible = 0;
             var linesRead = 0;
             var trianglesInput = new StringBuilder();
-            foreach (var line in input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var line in input.Lines())
             {
                 linesRead++;
                 trianglesInput.AppendLine(line);

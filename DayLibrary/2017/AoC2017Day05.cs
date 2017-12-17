@@ -1,3 +1,4 @@
+using Common.Extensions;
 using System;
 using System.Linq;
 
@@ -8,7 +9,7 @@ namespace DayLibrary
 
         public override string Part1(string input)
         {
-            var dic = input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            var dic = input.Lines().Select(int.Parse).ToArray();
             var currentIndex = 0;
             var currentSteps = 0;
             try
@@ -30,7 +31,7 @@ namespace DayLibrary
       
         public override string Part2(string input)
         {
-            var dic = input.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            var dic = input.Lines().Select(int.Parse).ToArray();
 
             var currentIndex = 0;
             var currentSteps = 0;
