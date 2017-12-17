@@ -10,14 +10,13 @@ namespace DayLibraryTests
         [Test]
         public void TestPart1()
         {
-            Assert.AreEqual(null, TestPart1(Input));
-            //Assert.AreEqual(null, TestPart1(null));
+            Assert.AreEqual("638", TestPart1("3", 2017));
+            Assert.AreEqual(null, TestPart1(null, 2017));
         }
         [Test]
         public void TestPart2()
         {
-            Assert.AreEqual(null, TestPart2(Input));
-            //Assert.AreEqual(null, TestPart2(null));
+            Assert.AreEqual("46038988", TestPart2(null, 50000000));
         }
     }
 }
