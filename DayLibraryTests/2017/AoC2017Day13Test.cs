@@ -14,7 +14,7 @@ namespace DayLibraryTests
         public void TestPart1()
         {
             Assert.AreEqual("24", TestPart1(Input));
-            Assert.AreEqual(null, TestPart1(null));
+            Assert.AreEqual("2384", TestPart1(null));
         }
         [Test]
         public void TestPart2()

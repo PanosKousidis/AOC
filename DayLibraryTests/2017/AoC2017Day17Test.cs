@@ -9,7 +9,7 @@ namespace DayLibraryTests
         public void TestPart1()
         {
             Assert.AreEqual("638", TestPart1("3", 2017));
-            Assert.AreEqual(null, TestPart1(null, 2017));
+            Assert.AreEqual("419", TestPart1(null, 2017));
         }
         [Test]
         public void TestPart2()

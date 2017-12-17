@@ -62,7 +62,9 @@ namespace DayLibrary
 
         private static int GetDistance(Point p)
         {
-            return Math.Abs(Math.Abs(p.X) + (Math.Abs(p.Y) - Math.Abs(p.X) > 0 ? Math.Abs(p.Y) - Math.Abs(p.X) / 2 : 0));
+            var x = Math.Abs(p.X);
+            var y = Math.Abs(p.Y);
+            return y >= x ? (x + y) / 2 : x - y / 2;
         }
 
        
