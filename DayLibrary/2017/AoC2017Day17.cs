@@ -4,6 +4,15 @@ namespace DayLibrary
 {
     public class AoC2017Day17 : DayBase
     {
+        public override string Part1(string input)
+        {
+            return Part1(input, 2017);
+        }
+
+        public override string Part2(string input)
+        {
+            return Part2(input, 50000000);
+        }
 
         public override string Part1(string input, object args)
         {
@@ -23,7 +32,7 @@ namespace DayLibrary
             }
             return arr[index + 1].ToString();
         }
-             
+
         public override string Part2(string input, object args)
         {
             var arr = new List<int>() { 0 };

@@ -43,10 +43,12 @@ namespace AoC
                     var input = WebHelper.GetInput(yearNo, dayNo);
                     Console.WriteLine();
                     Console.WriteLine("Part 1");
-                    Console.WriteLine(day.Part1(input));
+                    var t = DateTime.Now;
+                    Console.WriteLine(day.Part1(input) + " (Time Elapsed : " + (DateTime.Now-t).ToString(@"mm\:ss\.fff") + ")");
                     Console.WriteLine();
                     Console.WriteLine("Part 2");
-                    Console.WriteLine(day.Part2(input));
+                    t = DateTime.Now;
+                    Console.WriteLine(day.Part2(input) + " (Time Elapsed : " + (DateTime.Now - t).ToString(@"mm\:ss\.fff") + ")");
                     Console.WriteLine();
                 }
                 catch (TypeLoadException)

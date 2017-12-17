@@ -11,6 +11,16 @@ namespace DayLibrary
         private const long FactorB = 48271;
         private const long Dividor = 2147483647;
 
+        public override string Part1(string input)
+        {
+            return Part1(input, 40000000);
+        }
+
+        public override string Part2(string input)
+        {
+            return Part2(input, 5000000);
+        }
+
         public override string Part1(string input, object args)
         {
             var reps = (int)args;

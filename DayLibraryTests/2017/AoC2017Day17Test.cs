@@ -5,8 +5,6 @@ namespace DayLibraryTests
     [TestFixture]
     public class AoC2017Day17Test : DayTest
     {
-        private const string Input = @"";
-
         [Test]
         public void TestPart1()
         {

@@ -10,11 +10,11 @@ namespace DayLibrary
 
         public override string Part1(string input)
         {
-            return Part1(input, null);
+            return Part1(input, 16);
         }
         public override string Part2(string input)
         {
-            return Part2(input, null);
+            return Part2(input, new[]{ 16, 1000000000});
         }
 
         public override string Part1(string input, object args)
