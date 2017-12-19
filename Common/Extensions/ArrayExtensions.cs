@@ -26,18 +26,18 @@ namespace Common.Extensions
 
         public static string[,] InvertArray(this string[][] inputArr)
         {
-            var ret = new string[inputArr.Length, inputArr.Length];
+            var ret = new string[inputArr[0].Length, inputArr.Length];
 
-            for (var i = 0; i < inputArr.Length; i++)
+            for (var y = 0; y < inputArr.Length; y++)
             {
-                for (var j = 0; j < inputArr[i].Length; j++)
+                for (var x = 0; x < inputArr[0].Length; x++)
                 {
-                    ret[j, inputArr.GetUpperBound(0) - i] = inputArr[i][j];
+                     ret[x, inputArr.GetUpperBound(0) - y] = inputArr[y][x];
                 }
             }
             return ret;
         }
-      
+
         public static Dictionary<Point,object> ToDictionaryOfPointObject(this string[][] arr)
         {
             var dic = new Dictionary<Point, object>();
