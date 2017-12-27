@@ -21,7 +21,7 @@ namespace Common.Helpers
         public ECardinals Face { get; set; }
         public string InvalidDestinationString { get; set; }
         public bool MoveAllowed { get; set; } = true;
-
+        public bool ThrowOnInvalidMove { get; set; } = false;
         public int DistanceFrom(int x, int y) => Math.Abs(LocationX - x) + Math.Abs(LocationY - y);
         public string MapValue => Map[new Point(LocationX,LocationY)].ToString();
 
@@ -41,7 +41,7 @@ namespace Common.Helpers
             Face = (ECardinals) (((int) Face + (int) order) % 4);
             if (Face < 0) Face = 4 + Face;
         }
-        public void Move(ECardinals direction, int steps, bool addToVisited, bool allowNewLocations)
+        public void Move(ECardinals direction, int steps, bool addToVisited, bool allowNewLocations, bool Peek = false)
         {
             var reps = 1;
             if (addToVisited)
@@ -55,25 +55,49 @@ namespace Common.Helpers
                 {
                     case ECardinals.Up:
                         if (IsValidMapLocation(LocationX, LocationY + 1, allowNewLocations))
-                            LocationY += steps;
+                        {
+                            if (!Peek)
+                                LocationY += steps;
+                        }
+                        else
+                            if (ThrowOnInvalidMove) throw new InvalidOperationException();
                         break;
                     case ECardinals.Right:
                         if (IsValidMapLocation(LocationX + 1, LocationY, allowNewLocations))
-                            LocationX += steps;
+                        {
+                            if (!Peek)
+                                LocationX += steps;
+                        }
+                        else
+                            if (ThrowOnInvalidMove) throw new InvalidOperationException();
                         break;
                     case ECardinals.Down:
                         if (IsValidMapLocation(LocationX, LocationY - 1, allowNewLocations))
-                            LocationY -= steps;
+                        {
+                            if (!Peek)
+                                LocationY -= steps;
+                        }
+                        else
+                            if (ThrowOnInvalidMove) throw new InvalidOperationException();
                         break;
                     case ECardinals.Left:
                         if (IsValidMapLocation(LocationX - 1, LocationY, allowNewLocations))
-                            LocationX -= steps;
+                        {
+                            if (!Peek)
+                                LocationX -= steps;
+                        }
+                        else
+                            if (ThrowOnInvalidMove) throw new InvalidOperationException();
                         break;
                     default:
                         throw new NotSupportedException();
                 }
-                AddToVisited();
+                if (!Peek) AddToVisited();
             }
+        }
+        public void Peek()
+        {
+            Move(Face, 1, false, false, true);
         }
         public void MoveForward(int steps, bool addToVisited, bool allowNewLocations)
         {
