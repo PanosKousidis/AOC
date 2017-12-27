@@ -17,14 +17,14 @@ namespace Common.Helpers
 
         public int LocationX { get; set; }
         public int LocationY { get; set; }
-        public Dictionary<Point,object> Map { get; set; }
+        public Dictionary<Point, object> Map { get; set; }
         public ECardinals Face { get; set; }
         public string InvalidDestinationString { get; set; }
         public bool MoveAllowed { get; set; } = true;
         public bool ThrowOnInvalidMove { get; set; } = false;
         public int DistanceFrom(int x, int y) => Math.Abs(LocationX - x) + Math.Abs(LocationY - y);
-        public string MapValue => Map[new Point(LocationX,LocationY)].ToString();
-
+        public string MapValue => Map.ContainsKey(new Point(LocationX, LocationY)) ? Map[new Point(LocationX, LocationY)].ToString() : MapDefaultValue;
+        public string MapDefaultValue { get; set; } = "0";
         #endregion
 
         #region Events

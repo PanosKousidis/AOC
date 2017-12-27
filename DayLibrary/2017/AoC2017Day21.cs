@@ -2,6 +2,7 @@ using Common.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace DayLibrary
 {
@@ -14,18 +15,63 @@ namespace DayLibrary
         {
             var rules = new List<FractalRule>();
             input.Lines().Select(FractalRule.Parse).ToList().ForEach(x => rules.AddRange(x));
-            
-            var f = new Fractal() { Value = Start };
-            for (var i = 0; i < (int)args; i++)
+
+            var f = Start.Lines().ToList();
+
+            for(var r = 0; r<(int)args;r++)
             {
-                f.Divide(rules);
+                f = BreakFractals(f, rules);
             }
-            return f.Value.Count(x => x == '#').ToString();
+
+            return f.Sum(x => x.Count(y => y == '#')).ToString();
         }
 
         public override string Part2(string input, object args)
         {
-            return null;
+            return Part1(input,args);
+        }
+
+        public List<string> BreakFractals(List<string> lines, List<FractalRule> rules)
+        {
+            var newret = new List<string>();
+            int div = 0;
+            if (lines.Count % 2 == 0)
+                div = 2;
+            else
+                div = 3;
+
+            //Get in fractals horizontally
+            for (var line = 0; line < lines.Count; line += div)
+            {
+                var newretline = newret.Count;
+                //Add rows in the return
+                for (var i = 0; i <= div; i++)
+                    newret.Add("");
+
+
+                //Get in fractal 
+                for (var col = 0; col < lines.Count; col += div)
+                {
+                    //Get string of current fractal
+                    var currentFractal = new List<string>();
+                    for (var currentline = 0; currentline < div; currentline++)
+                    {
+                        var fRow = lines[line + currentline].Substring(col, div);
+                        currentFractal.Add(fRow);
+                    }
+
+                    //match it in rules
+                    var newfractal = rules.Where(x => x.Determinant == string.Join("/", currentFractal)).FirstOrDefault().Result.Split(new[] { "/" }, StringSplitOptions.RemoveEmptyEntries);
+
+
+                    //add the result in the result variable
+                    for (var i = 0; i < newfractal.Length; i++)
+                    {
+                        newret[newretline + i] += newfractal[i];
+                    }
+                }
+            }
+            return newret;
         }
     }
     public class FractalRule
@@ -47,7 +93,7 @@ namespace DayLibrary
                 {
                     s[i] = input;
                     s[i + 1] = Flip(input);
-                    input = Rotate(input);
+                    input = RotateClockwise(input);
                 }
             }
             else
@@ -56,36 +102,39 @@ namespace DayLibrary
                 for (var i = 0; i < 4; i ++)
                 {
                     s[i] = input;
-                    input = Rotate(input);
+                    input = RotateClockwise(input);
                 }
             }
             return s;
         }
 
-        private static string Rotate(string input)
+        private static string RotateClockwise(string input)
         {
-            //var parts = input.Split('/');
-            //var newparts = new string[parts.Length, parts.Length];
-            //for (var j = 0; j < parts.Length; j++)
-            //{
-            //    for (var i = 0; i < parts[j].Length; i++)
-            //    {
-            //        newparts[parts.Length - 1 - j, i] += parts[j][i];
-            //    }
-            //}
-            return null;
+            if (input.Count(x => x == '/') == 2)
+            {
+                return input[8].ToString() + input[4].ToString() + input[0].ToString() + "/" +
+                        input[9].ToString() + input[5].ToString() + input[1].ToString() + "/" +
+                        input[10].ToString() + input[6].ToString() + input[2].ToString();
+            }
+            else
+            {
+                return input[3].ToString() + input[0].ToString() + input[2].ToString() +
+                    input[4].ToString() + input[1].ToString();
+            }
         }
         private static string Flip(string input)
         {
-            return null;
-        }
-    }
-    public class Fractal
-    {
-        public string Value { get; set; }
-        public List<Fractal> Divide(IEnumerable<FractalRule> r)
-        {
-            return null;
+            if (input.Count(x => x == '/') == 2)
+            {
+                return input[2].ToString() + input[1].ToString() + input[0].ToString() + "/" +
+                        input[6].ToString() + input[5].ToString() + input[4].ToString() + "/" +
+                        input[10].ToString() + input[9].ToString() + input[8].ToString();
+            }
+            else
+            {
+                return input[1].ToString() + input[0].ToString() + "/" +
+                    input[4].ToString() + input[3].ToString();
+            }
         }
     }
 }

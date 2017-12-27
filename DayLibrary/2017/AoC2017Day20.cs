@@ -8,7 +8,7 @@ namespace DayLibrary
     public class AoC2017Day20 : DayBase
     {
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             Particle._id = 0;
             var particles = input.Lines().Select(x => Particle.Parse(x)).ToList();
@@ -19,7 +19,7 @@ namespace DayLibrary
             return particles.Where(x => x.GetDistance() == particles.Min(y => y.GetDistance())).First().Id.ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             var particles = input.Lines().Select(x => Particle.Parse(x)).ToList();
             for (var time = 0; time < 1000; time++)

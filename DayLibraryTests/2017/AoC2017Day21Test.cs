@@ -12,13 +12,12 @@ namespace DayLibraryTests
         public void TestPart1()
         {
             Assert.AreEqual("12", TestPart1(Input, 2));
-            Assert.AreEqual(null, TestPart1(null, 5));
+            Assert.AreEqual("184", TestPart1(null, 5));
         }
         [Test]
         public void TestPart2()
         {
-            Assert.AreEqual(null, TestPart2(Input));
-            //Assert.AreEqual(null, TestPart2(null));
+            Assert.AreEqual("2810258", TestPart2(null, 18));
         }
     }
 }
