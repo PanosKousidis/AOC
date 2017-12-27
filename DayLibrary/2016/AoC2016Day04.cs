@@ -10,13 +10,13 @@ namespace DayLibrary
     public class AoC2016Day04 : DayBase
     {
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             return input.Lines()
                 .Select(Room.CreateRoom).Where(room => room.IsReal).Sum(room => room.SectorId).ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             foreach (var line in input.Lines())
             {

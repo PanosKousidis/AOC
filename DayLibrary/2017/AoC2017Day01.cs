@@ -3,12 +3,12 @@
     public class AoC2017Day01:DayBase
     {
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             return CyclicSequence(input, 1).ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             return CyclicSequence(input, input.Length / 2).ToString();
         }

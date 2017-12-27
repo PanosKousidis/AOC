@@ -6,11 +6,11 @@ namespace DayLibrary
     public class AoC2017Day02: DayBase
     {
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             return CalcCheckSumMinMax(input.StringTo2ArrayOfArrays("\t")).ToString();
         }
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             return CalcCheckSumMod(input.StringTo2ArrayOfArrays("\t")).ToString();
         }
