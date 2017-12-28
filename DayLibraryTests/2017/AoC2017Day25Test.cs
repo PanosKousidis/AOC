@@ -34,11 +34,5 @@ In state B:
             Assert.AreEqual("3", TestPart1(Input));
             Assert.AreEqual("4287", TestPart1(null));
         }
-        [Test]
-        public void TestPart2()
-        {
-            Assert.AreEqual(null, TestPart2(Input));
-            //Assert.AreEqual(null, TestPart2(null));
-        }
     }
 }

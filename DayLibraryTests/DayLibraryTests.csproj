@@ -53,6 +53,15 @@
     <Compile Include="..\AOC\WebHelper.cs">
       <Link>WebHelper.cs</Link>
     </Compile>
+    <Compile Include="2016\AoC2016Day13Test.cs" />
+    <Compile Include="2016\AoC2016Day12Test.cs" />
+    <Compile Include="2016\AoC2016Day11Test.cs" />
+    <Compile Include="2016\AoC2016Day10Test.cs" />
+    <Compile Include="2016\AoC2016Day09Test.cs" />
+    <Compile Include="2016\AoC2016Day08Test.cs" />
+    <Compile Include="2016\AoC2016Day07Test.cs" />
+    <Compile Include="2016\AoC2016Day06Test.cs" />
+    <Compile Include="2016\AoC2016Day05Test.cs" />
     <Compile Include="2016\AoC2016Day04Test.cs" />
     <Compile Include="2016\AoC2016Day03Test.cs" />
     <Compile Include="2016\AoC2016Day02Test.cs" />

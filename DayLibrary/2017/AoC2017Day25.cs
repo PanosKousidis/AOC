@@ -18,7 +18,7 @@ namespace DayLibrary
 
         public override string Part2(string input, object args)
         {
-            return null;
+            return "End of AoC - No output!!";
         }
     }
     public class Actions

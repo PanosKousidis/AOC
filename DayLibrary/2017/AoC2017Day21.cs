@@ -11,6 +11,15 @@ namespace DayLibrary
         const string Start = @".#.
 ..#
 ###";
+        public override string Part1(string input)
+        {
+            return Part1(input, 5);
+        }
+        public override string Part2(string input)
+        {
+            return Part2(input, 18);
+        }
+
         public override string Part1(string input, object args)
         {
             var rules = new List<FractalRule>();
@@ -18,7 +27,7 @@ namespace DayLibrary
 
             var f = Start.Lines().ToList();
 
-            for(var r = 0; r<(int)args;r++)
+            for (var r = 0; r < (int)args; r++)
             {
                 f = BreakFractals(f, rules);
             }
@@ -28,7 +37,7 @@ namespace DayLibrary
 
         public override string Part2(string input, object args)
         {
-            return Part1(input,args);
+            return Part1(input, args);
         }
 
         public List<string> BreakFractals(List<string> lines, List<FractalRule> rules)
@@ -99,7 +108,7 @@ namespace DayLibrary
             else
             {
                 s = new string[4];
-                for (var i = 0; i < 4; i ++)
+                for (var i = 0; i < 4; i++)
                 {
                     s[i] = input;
                     input = RotateClockwise(input);
