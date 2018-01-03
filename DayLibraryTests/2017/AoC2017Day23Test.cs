@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 
 namespace DayLibraryTests
 {
@@ -10,14 +11,12 @@ namespace DayLibraryTests
         [Test]
         public void TestPart1()
         {
-            //Assert.AreEqual(null, TestPart1(Input));
-            Assert.AreEqual(null, TestPart1(null));
+            Assert.AreEqual("3969", TestPart1(null));
         }
         [Test]
         public void TestPart2()
         {
-            //Assert.AreEqual(null, TestPart2(Input));
-            Assert.AreEqual(null, TestPart2(null));
+            throw new NotImplementedException("This was solved using debug mode and manually changing register values");
         }
     }
 }

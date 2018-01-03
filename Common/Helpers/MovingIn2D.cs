@@ -14,7 +14,7 @@ namespace Common.Helpers
         #endregion
 
         #region Properties
-        public string DefaultMapValue { get; set; }
+        public string DefaultMapValue { get; set; } = "0";
         public int LocationX { get; set; }
         public int LocationY { get; set; }
         public Dictionary<Point, object> Map { get; set; }
