@@ -17,7 +17,7 @@ namespace Common.Helpers
         public string DefaultMapValue { get; set; }
         public int LocationX { get; set; }
         public int LocationY { get; set; }
-        public Dictionary<Point,object> Map { get; set; }
+        public Dictionary<Point, object> Map { get; set; }
         public ECardinals Face { get; set; }
         public string InvalidDestinationString { get; set; }
         public bool MoveAllowed { get; set; } = true;

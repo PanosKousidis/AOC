@@ -7,13 +7,13 @@ namespace DayLibrary
     {
         private static int _furthest;
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             var location = GetCurrentLocation(input);
             return GetDistance(location).ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             GetCurrentLocation(input);
             return _furthest.ToString();

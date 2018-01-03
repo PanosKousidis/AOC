@@ -7,7 +7,7 @@ namespace DayLibrary
     public class AoC2017Day18 : DayBase
     {
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             var rq = new List<long>();
             var sq = new List<long>();
@@ -16,7 +16,7 @@ namespace DayLibrary
             return p0.LastFrequencySent.ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             var q0 = new List<long>();
             var q1 = new List<long>();

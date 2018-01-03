@@ -54,7 +54,7 @@ namespace Common.Extensions
                     .ToArray();
                 for (var j = 0; j < columns.Length; j++)
                 {
-                    ret[i,j] = columns[j];
+                    ret[j,i] = columns[j];
                 }
             }
             return ret;

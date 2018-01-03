@@ -2,12 +2,12 @@ namespace DayLibrary
 {
     public class AoC2017Day09 : DayBase
     {
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             return Process(input).Item1.ToString();
         }
       
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             return Process(input).Item2.ToString();
         }

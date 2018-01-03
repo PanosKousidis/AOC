@@ -11,13 +11,13 @@ namespace DayLibrary
         private readonly Dictionary<string, int> _registers = new Dictionary<string, int>();
         private int _max;
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             Run(input);
             return _registers.Values.Max().ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             Run(input);
             return _max.ToString();

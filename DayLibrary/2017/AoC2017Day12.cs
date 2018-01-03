@@ -8,7 +8,7 @@ namespace DayLibrary
     public class AoC2017Day12 : DayBase
     {
         
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             var dic = ParseInput(input);
             var connections = new HashSet<int>();
@@ -16,7 +16,7 @@ namespace DayLibrary
             return connections.Count.ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             var dic = ParseInput(input);
             var groups = 0;

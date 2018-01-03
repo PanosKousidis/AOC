@@ -8,7 +8,7 @@ namespace DayLibrary
     public class AoC2017Day03 : DayBase
     {
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             return Part1Result(int.Parse(input)).ToString();
         }
@@ -44,7 +44,7 @@ namespace DayLibrary
         }
 
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             return Part2Result(int.Parse(input)).ToString();
         }

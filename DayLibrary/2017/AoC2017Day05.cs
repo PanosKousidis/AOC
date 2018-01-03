@@ -7,7 +7,7 @@ namespace DayLibrary
     public class AoC2017Day05 : DayBase
     {
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             var dic = input.Lines().Select(int.Parse).ToArray();
             var currentIndex = 0;
@@ -29,7 +29,7 @@ namespace DayLibrary
             return currentSteps.ToString();
         }
       
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             var dic = input.Lines().Select(int.Parse).ToArray();
 

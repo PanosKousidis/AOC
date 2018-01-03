@@ -7,7 +7,7 @@ namespace DayLibrary
 {
     public class AoC2017Day13 : DayBase
     {
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             var scanners = GetScanners(input);
             var max = scanners.Max(scanner => scanner.Depth);
@@ -28,7 +28,7 @@ namespace DayLibrary
             return score.ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             var time = 0;
             var scanners = GetScanners(input);

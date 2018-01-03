@@ -7,14 +7,14 @@ namespace DayLibrary
 {
     public class AoC2017Day07 : DayBase
     {
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             var programs = ParsePrograms(input);
             programs = StructurePrograms(programs);
             return programs.Values.First(program => program.Parent == null).Name;
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             var programs = ParsePrograms(input);
             programs = StructurePrograms(programs);

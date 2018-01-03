@@ -1,145 +1,149 @@
 using Common.Extensions;
 using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using System.Linq;
+using System.Text;
 
 namespace DayLibrary
 {
     public class AoC2017Day21 : DayBase
     {
-        private TransformationMatrix _matrix;
+        const string Start = @".#.
+..#
+###";
         public override string Part1(string input)
         {
             return Part1(input, 5);
         }
         public override string Part2(string input)
         {
-            return Part2(input, null);
+            return Part2(input, 18);
         }
 
         public override string Part1(string input, object args)
         {
-            _matrix = TransformationMatrix.Parse(input);
-            var iterations = (int)args;
-            var arr = new string[3, 3] { { ".", "#", "." },
-                                      { ".", ".", "#" },
-                                      { "#", "#", "#" } };
-            for(var i = 0; i < iterations; i++)
-                arr = Iterate(arr);
-            return Count(arr,'#').ToString();
+            var rules = new List<FractalRule>();
+            input.Lines().Select(FractalRule.Parse).ToList().ForEach(x => rules.AddRange(x));
+
+            var f = Start.Lines().ToList();
+
+            for (var r = 0; r < (int)args; r++)
+            {
+                f = BreakFractals(f, rules);
+            }
+
+            return f.Sum(x => x.Count(y => y == '#')).ToString();
         }
 
-        private string[,] Iterate(string[,] arr)
+        public override string Part2(string input, object args)
         {
-            string[,] hRes = null;
-            string[,] vRes = null;
-            if (arr.Length % 2 == 0)
+            return Part1(input, args);
+        }
+
+        public List<string> BreakFractals(List<string> lines, List<FractalRule> rules)
+        {
+            var newret = new List<string>();
+            int div = 0;
+            if (lines.Count % 2 == 0)
+                div = 2;
+            else
+                div = 3;
+
+            //Get in fractals horizontally
+            for (var line = 0; line < lines.Count; line += div)
             {
-                var dim = 3 * (arr.GetUpperBound(0) + 1) / 2;
+                var newretline = newret.Count;
+                //Add rows in the return
+                for (var i = 0; i <= div; i++)
+                    newret.Add("");
 
-                for (var y = 0; y < arr.GetUpperBound(1) + 1; y += 2)
+
+                //Get in fractal 
+                for (var col = 0; col < lines.Count; col += div)
                 {
-                    hRes = null;
-                    for (var x = 0; x < arr.GetUpperBound(0) + 1; x += 2)
+                    //Get string of current fractal
+                    var currentFractal = new List<string>();
+                    for (var currentline = 0; currentline < div; currentline++)
                     {
-                        var tmp = new string[2, 2];
-                        tmp[0, 0] = arr[x, y];
-                        tmp[0, 1] = arr[x, y + 1];
-                        tmp[1, 0] = arr[x + 1, y];
-                        tmp[1, 1] = arr[x + 1, y + 1];
-                        var r = _matrix.Rules[tmp.ToCustomString()];
-                        hRes = hRes.CombineArrays(r, true);
-
+                        var fRow = lines[line + currentline].Substring(col, div);
+                        currentFractal.Add(fRow);
                     }
-                    vRes = vRes.CombineArrays(hRes, false);
+
+                    //match it in rules
+                    var newfractal = rules.Where(x => x.Determinant == string.Join("/", currentFractal)).FirstOrDefault().Result.Split(new[] { "/" }, StringSplitOptions.RemoveEmptyEntries);
+
+
+                    //add the result in the result variable
+                    for (var i = 0; i < newfractal.Length; i++)
+                    {
+                        newret[newretline + i] += newfractal[i];
+                    }
+                }
+            }
+            return newret;
+        }
+    }
+    public class FractalRule
+    {
+        public string Determinant { get; private set; }
+        public string Result { get; private set; }
+        public static IEnumerable<FractalRule> Parse(string input)
+        {
+            var parts = input.Split(new[] { " => " }, StringSplitOptions.RemoveEmptyEntries);
+            return GetAllRotations(parts[0]).Select(x => new FractalRule() { Determinant = x, Result = parts[1] });
+        }
+        private static string[] GetAllRotations(string input)
+        {
+            string[] s = null;
+            if (input.Count(x => x == '/') == 2)
+            {
+                s = new string[8];
+                for (var i = 0; i < 8; i += 2)
+                {
+                    s[i] = input;
+                    s[i + 1] = Flip(input);
+                    input = RotateClockwise(input);
                 }
             }
             else
             {
-                var dim = arr.GetUpperBound(0) + 1;
-                var resdim = 4 * (dim) / 3;
-
-                for (var y = 0; y < dim; y += 3)
+                s = new string[4];
+                for (var i = 0; i < 4; i++)
                 {
-                    for (var x = 0; x < dim; x += 3)
-                    {
-                        var tmp = new string[3, 3];
-                        tmp[0, 0] = arr[x, y];
-                        tmp[0, 1] = arr[x, y + 1];
-                        tmp[0, 2] = arr[x, y + 2];
-                        tmp[1, 0] = arr[x + 1, y];
-                        tmp[1, 1] = arr[x + 1, y + 1];
-                        tmp[1, 2] = arr[x + 1, y + 2];
-                        tmp[2, 0] = arr[x + 2, y];
-                        tmp[2, 1] = arr[x + 2, y + 1];
-                        tmp[2, 2] = arr[x + 2, y + 2];
-
-                        var r = _matrix.Rules[tmp.ToCustomString()];
-                        hRes = hRes.CombineArrays(r, true);
-                    }
-                    vRes = vRes.CombineArrays(hRes, false);
+                    s[i] = input;
+                    input = RotateClockwise(input);
                 }
             }
-
-
-
-            return vRes;
+            return s;
         }
 
-        private static int Count(string [,] arr, char c)
+        private static string RotateClockwise(string input)
         {
-            var count = 0;
-            for (var y = 0; y<= arr.GetUpperBound(1);y++)
+            if (input.Count(x => x == '/') == 2)
             {
-                for (var x = 0; x <= arr.GetUpperBound(0); x++)
-                {
-                    if (arr[x, y] == c.ToString()) count++;
-                }
+                return input[8].ToString() + input[4].ToString() + input[0].ToString() + "/" +
+                        input[9].ToString() + input[5].ToString() + input[1].ToString() + "/" +
+                        input[10].ToString() + input[6].ToString() + input[2].ToString();
             }
-                return count;
-        }
-        public override string Part2(string input, object args)
-        {
-            return null;
-        }
-    }
-
-    public class TransformationMatrix
-    {
-        public Dictionary<string, string[,]> Rules { get; set; } = new Dictionary<string, string[,]>();
-        public static TransformationMatrix Parse (string input)
-        {
-            var matrix = new TransformationMatrix();
-
-            foreach (var line in input.Lines())
+            else
             {
-                var det = line.Split(new[] { " => " }, StringSplitOptions.RemoveEmptyEntries)[0];
-                var res = line.Split(new[] { " => " }, StringSplitOptions.RemoveEmptyEntries)[1];
-                var arr = det.StringTo2DimensionalArray("","/");
-                var arrRes = res.StringTo2DimensionalArray("","/");
-
-                matrix.Rules.Add(arr.ToCustomString(), arrRes);
-                arr = arr.InvertArray();
-                try
-                {
-                    matrix.Rules.Add(arr.ToCustomString(), arrRes);
-                }
-                catch { }
-                arr = arr.InvertArray();
-                try
-                {
-                    matrix.Rules.Add(arr.ToCustomString(), arrRes);
-                }
-                catch { }
-                arr = arr.InvertArray();
-                try
-                {
-                    matrix.Rules.Add(arr.ToCustomString(), arrRes);
-                }
-                catch { }
+                return input[3].ToString() + input[0].ToString() + input[2].ToString() +
+                    input[4].ToString() + input[1].ToString();
             }
-            return matrix;
+        }
+        private static string Flip(string input)
+        {
+            if (input.Count(x => x == '/') == 2)
+            {
+                return input[2].ToString() + input[1].ToString() + input[0].ToString() + "/" +
+                        input[6].ToString() + input[5].ToString() + input[4].ToString() + "/" +
+                        input[10].ToString() + input[9].ToString() + input[8].ToString();
+            }
+            else
+            {
+                return input[1].ToString() + input[0].ToString() + "/" +
+                    input[4].ToString() + input[3].ToString();
+            }
         }
     }
 }

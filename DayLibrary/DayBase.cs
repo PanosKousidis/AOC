@@ -1,23 +1,18 @@
 ﻿namespace DayLibrary
 {
-    public class DayBase
+    public abstract class DayBase
     {
         public virtual string Part1(string input)
         {
-            return null;
+            return Part1(input, null);
         }
         public virtual string Part2(string input)
         {
-            return null;
+            return Part2(input, null);
         }
-        public virtual string Part1(string input, object args)
-        {
-            return null;
-        }
-        public virtual string Part2(string input, object args)
-        {
-            return null;
-        }
+        public abstract string Part1(string input, object args);
+
+        public abstract string Part2(string input, object args);
 
     }
 

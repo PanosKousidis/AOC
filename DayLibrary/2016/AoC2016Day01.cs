@@ -9,7 +9,7 @@ namespace DayLibrary
     {
         private bool _bDone;
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             var person = new MovingIn2D();
 
@@ -21,7 +21,7 @@ namespace DayLibrary
             return person.DistanceFrom(0,0).ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             _bDone = false;
             var person = new MovingIn2D();

@@ -9,7 +9,7 @@ namespace DayLibrary
     public class AoC2017Day14 : DayBase
     {
 
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             var count = 0;
 
@@ -23,7 +23,7 @@ namespace DayLibrary
             return count.ToString();
 
         }
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
 
             var map = new StringBuilder();

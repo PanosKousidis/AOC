@@ -12,7 +12,7 @@ namespace DayLibrary
         {
             return Part1(input, 256);
         }
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             return GetKnotHash(input);
         }

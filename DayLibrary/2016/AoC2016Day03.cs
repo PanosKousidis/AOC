@@ -8,7 +8,7 @@ namespace DayLibrary
 {
     public class AoC2016Day03 : DayBase
     {
-        public override string Part1(string input)
+        public override string Part1(string input, object args)
         {
             var iPossible = input.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries)
                 .Select(line => line.Split(new[] {" ", "\r\n"}, StringSplitOptions.RemoveEmptyEntries))
@@ -17,7 +17,7 @@ namespace DayLibrary
             return iPossible.ToString();
         }
 
-        public override string Part2(string input)
+        public override string Part2(string input, object args)
         {
             var iPossible = 0;
             var linesRead = 0;
