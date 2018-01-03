@@ -91,7 +91,11 @@ namespace Common.Extensions
         public static string[,] CombineArrays(this string[,] arr1, string[,] arr2, bool horizontal)
         {
             string[,] arr;
-            if (horizontal)
+            if (arr1 is null)
+            {
+                return arr2;
+            }
+            else if (horizontal)
             {
                 var xDim = arr1.GetUpperBound(0) + 1 + arr2.GetUpperBound(0) + 1;
                 var yDim = arr1.GetUpperBound(1) + 1;
@@ -100,7 +104,9 @@ namespace Common.Extensions
                 {
                     for (var x = 0; x < xDim; x++)
                     {
-                        arr[x, y] = x <= arr1.GetUpperBound(0) ? arr1[x, y] : arr2[x - arr1.GetUpperBound(0), y];
+                        arr[x, y] = x <= arr1.GetUpperBound(0) 
+                            ? arr1[x, y] 
+                            : arr2[x - arr1.GetUpperBound(0) - 1, y];
                     }
                 }
             }
@@ -108,12 +114,14 @@ namespace Common.Extensions
             {
                 var xDim = arr1.GetUpperBound(0) + 1;
                 var yDim = arr1.GetUpperBound(1) + 1 + arr2.GetUpperBound(1) + 1;
-                arr = new string[arr1.GetUpperBound(0) + 1, arr1.GetUpperBound(1) + 1 + arr2.GetUpperBound(1) + 1];
+                arr = new string[xDim, yDim];
                 for (var y = 0; y < yDim; y++)
                 {
                     for (var x = 0; x < xDim; x++)
                     {
-                        arr[x, y] = y <= arr1.GetUpperBound(0) ? arr1[x, y] : arr2[x, y - arr1.GetUpperBound(1)];
+                        arr[x, y] = y <= arr1.GetUpperBound(1) 
+                            ? arr1[x, y] 
+                            : arr2[x, y - arr1.GetUpperBound(1) - 1];
                     }
                 }
             }

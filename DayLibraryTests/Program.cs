@@ -7,7 +7,7 @@ namespace DayLibraryTests
     public class Program
     {
         private const int Year = 2017;
-        private const int Day = 21;
+        private const int Day = 24;
 
 
         [STAThread]

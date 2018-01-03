@@ -2,6 +2,7 @@ using Common.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace DayLibrary
 {
@@ -31,21 +32,23 @@ namespace DayLibrary
 
         private string[,] Iterate(string[,] arr)
         {
+            string[,] hRes = null;
+            string[,] vRes = null;
             if (arr.Length % 2 == 0)
             {
-                var hRes = new string[(arr.Length / 2) ^ 2, (arr.Length / 2) ^ 2];
-                var vRes = new string[(arr.Length / 2) ^ 2, (arr.Length / 2) ^ 2];
+                var dim = 3 * (arr.GetUpperBound(0) + 1) / 2;
 
-                for (var y = 0; y < arr.Length ; y += 2)
+                for (var y = 0; y < arr.GetUpperBound(1) + 1; y += 2)
                 {
-                    for (var x = 0; x < arr.Length; x += 2)
+                    hRes = null;
+                    for (var x = 0; x < arr.GetUpperBound(0) + 1; x += 2)
                     {
                         var tmp = new string[2, 2];
                         tmp[0, 0] = arr[x, y];
                         tmp[0, 1] = arr[x, y + 1];
                         tmp[1, 0] = arr[x + 1, y];
                         tmp[1, 1] = arr[x + 1, y + 1];
-                        var r = _matrix.Rules[tmp];
+                        var r = _matrix.Rules[tmp.ToCustomString()];
                         hRes = hRes.CombineArrays(r, true);
 
                     }
@@ -54,12 +57,12 @@ namespace DayLibrary
             }
             else
             {
-                var hRes = new string[(arr.Length / 3) ^ 2, (arr.Length / 3) ^ 2];
-                var vRes = new string[(arr.Length / 3) ^ 2, (arr.Length / 3) ^ 2];
+                var dim = arr.GetUpperBound(0) + 1;
+                var resdim = 4 * (dim) / 3;
 
-                for (var y = 0; y < arr.Length; y += 3)
+                for (var y = 0; y < dim; y += 3)
                 {
-                    for (var x = 0; x < arr.Length; x += 3)
+                    for (var x = 0; x < dim; x += 3)
                     {
                         var tmp = new string[3, 3];
                         tmp[0, 0] = arr[x, y];
@@ -74,7 +77,6 @@ namespace DayLibrary
 
                         var r = _matrix.Rules[tmp.ToCustomString()];
                         hRes = hRes.CombineArrays(r, true);
-
                     }
                     vRes = vRes.CombineArrays(hRes, false);
                 }
@@ -82,12 +84,20 @@ namespace DayLibrary
 
 
 
-            return null;
+            return vRes;
         }
 
         private static int Count(string [,] arr, char c)
         {
-            return 0;
+            var count = 0;
+            for (var y = 0; y<= arr.GetUpperBound(1);y++)
+            {
+                for (var x = 0; x <= arr.GetUpperBound(0); x++)
+                {
+                    if (arr[x, y] == c.ToString()) count++;
+                }
+            }
+                return count;
         }
         public override string Part2(string input, object args)
         {
@@ -97,7 +107,7 @@ namespace DayLibrary
 
     public class TransformationMatrix
     {
-        public Dictionary<string[,], string[,]> Rules { get; set; } = new Dictionary<string[,], string[,]>();
+        public Dictionary<string, string[,]> Rules { get; set; } = new Dictionary<string, string[,]>();
         public static TransformationMatrix Parse (string input)
         {
             var matrix = new TransformationMatrix();
@@ -109,13 +119,25 @@ namespace DayLibrary
                 var arr = det.StringTo2DimensionalArray("","/");
                 var arrRes = res.StringTo2DimensionalArray("","/");
 
-                matrix.Rules.Add(arr, arrRes);
+                matrix.Rules.Add(arr.ToCustomString(), arrRes);
                 arr = arr.InvertArray();
-                matrix.Rules.Add(arr, arrRes);
+                try
+                {
+                    matrix.Rules.Add(arr.ToCustomString(), arrRes);
+                }
+                catch { }
                 arr = arr.InvertArray();
-                matrix.Rules.Add(arr, arrRes);
+                try
+                {
+                    matrix.Rules.Add(arr.ToCustomString(), arrRes);
+                }
+                catch { }
                 arr = arr.InvertArray();
-                matrix.Rules.Add(arr, arrRes);
+                try
+                {
+                    matrix.Rules.Add(arr.ToCustomString(), arrRes);
+                }
+                catch { }
             }
             return matrix;
         }

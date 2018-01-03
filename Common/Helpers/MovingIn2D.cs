@@ -14,7 +14,7 @@ namespace Common.Helpers
         #endregion
 
         #region Properties
-
+        public string DefaultMapValue { get; set; }
         public int LocationX { get; set; }
         public int LocationY { get; set; }
         public Dictionary<Point,object> Map { get; set; }
@@ -23,7 +23,22 @@ namespace Common.Helpers
         public bool MoveAllowed { get; set; } = true;
         public bool ThrowOnInvalidMove { get; set; } = false;
         public int DistanceFrom(int x, int y) => Math.Abs(LocationX - x) + Math.Abs(LocationY - y);
-        public string MapValue => Map[new Point(LocationX,LocationY)].ToString();
+        public string MapValue
+        {
+            get
+            {
+                if (!Map.ContainsKey(new Point(LocationX, LocationY)))
+                    Map.Add(new Point(LocationX, LocationY), DefaultMapValue);
+                return Map[new Point(LocationX, LocationY)].ToString();
+            }
+            set
+            {
+                if (!Map.ContainsKey(new Point(LocationX, LocationY)))
+                    Map.Add(new Point(LocationX, LocationY), DefaultMapValue);
+                Map[new Point(LocationX, LocationY)] = value;
+            }
+        }
+
 
         #endregion
 
